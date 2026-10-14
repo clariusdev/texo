@@ -42,8 +42,22 @@ actions for applying scripts and imaging.
 
 ## 3. Load a research script set
 
-Open a Clarius-provided research script set. Texo fills its **four editor windows** — every
-script is made of the same four parts, arranged in two columns:
+The research script sets ship in this repository's [`examples/`](../examples) folder, laid
+out as a Texo data folder:
+
+```
+examples/
+  applications/   presets (Research, Envelope Sequence, Channels Sequence)
+  probe/          probe definitions, one folder per HD3 model
+  script/         processing scripts
+  sequences/      sequences
+  parameters/     parameters
+```
+
+In the **Presets** panel, click **...** and choose the `examples` folder, then turn on the
+**HD3** filter (the probe filters start off). Pick your **Probe** and **Preset**, plus a
+**Mode** and depth **Range** if the preset offers them, and load. Texo fills its **four
+editor windows**. Every script is made of the same four parts, arranged in two columns:
 
 | Window | Part | What it defines |
 |--------|------|-----------------|

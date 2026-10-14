@@ -1,0 +1,31 @@
+geometry:
+  type: curved
+  elements: 192
+  pitch: 300 microns
+  radius: 45 mm
+  lensThickness: 0 mm
+capabilities:
+  scanlines: 192
+  bf: 8
+  tx: 64
+  rx: 32
+  txClock: 120MHz
+  rxClock: 60MHz
+  platform: v3
+stackinfo:
+  elevationHeight: 13 mm
+  elevationFocus: 80 mm
+  lowFreq: 2MHz
+  centerFreq: 3.5MHz
+  upperFreq: 6MHz
+defaults:
+  depth: 10cm
+  dopplerFreq: 3MHz
+  compound angle: 7.5 degrees
+  extension angle: 30 degrees
+  cardiac angle: 35 degrees
+freq:
+  start depth: 1cm
+  end depth: 25cm
+  lowFreq: 2.5MHz
+  upperFreq: 5MHz

@@ -33,7 +33,7 @@ load the clinical-grade scripts that ship in the Clarius App.
 
 ## Prerequisites
 
-- A Clarius scanner with research access enabled on the probe
+- A Clarius HD3 scanner with research access enabled on the probe
 - A Clarius Cloud account with research/Texo permissions
 - A probe and host machine on the same wireless network
 

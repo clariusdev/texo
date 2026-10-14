@@ -49,9 +49,9 @@ parse cleanly before the script is applied to the probe. See the
 [Scripting Guide](scripting.md) for what belongs in each window and how they reference one
 another through the `{...}` expression language.
 
-> In a development build the paths point at a local data tree; in a research release you
-> load a Clarius-provided script set through the **Presets** panel rather than browsing
-> raw files.
+> The easiest way to fill all four windows is the **Presets** panel, pointed at the
+> [`examples/`](../examples) folder. You can also load any single file into a window with
+> its load button.
 
 ## Probe Connection (right)
 
@@ -66,7 +66,9 @@ Lists the connected probe and manages the link:
 How you pull a research script set into the four windows. Select the **Probe**, **Preset**,
 **Mode**, and depth **Range**, then load — Texo fills Processing, Sequences, Probe, and
 Parameters from that set. Save and refresh controls let you store and re-pull your own
-sets, and a data-folder selector points Texo at where script sets live.
+sets, and a data-folder selector (**...**) points Texo at where script sets live: choose the
+[`examples/`](../examples) folder from this repository. The **V1**, **HD** and **HD3**
+filters choose which probe platforms are listed; they start off, so turn on **HD3**.
 
 The **Preset** chooses the sequence style: **Research** (a concise high-level sequence,
 available for all probes) or the event-by-event **Envelope** and **Channels** sequences.

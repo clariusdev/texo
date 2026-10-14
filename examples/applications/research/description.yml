@@ -1,0 +1,63 @@
+title: "Research"
+
+probes:
+  - model: "L7*"
+  - model: "L15*"
+  - model: "L20*"
+  - model: "C3*"
+  - model: "C7*"
+  - model: "EC7*"
+  - model: "PA2*"
+
+control:
+  - probe models: [ "*" ]
+    id: target depth
+    assign: endDepth
+    units: cm
+    from: 1
+    to: 30
+    start: 4
+    scripts:
+      - from: 1
+        to: 30
+        script: [ "research/env_hl" ]
+        sequences: [ "research/env_hl" ]
+        parameters: [ "research/env" ]
+
+streams:
+  - probe models: [ "*" ]
+    id: "scMode"
+    icon: "sc"
+    script: [ "research/sc" ]
+    sequences: [ "research/sc" ]
+    parameters: [ "research/sc" ]
+  - probe models: [ "*" ]
+    id: "mMode"
+    icon: "m"
+    script: [ "research/m" ]
+    sequences: [ "research/m" ]
+    parameters: [ "research/m" ]
+  - probe models: [ "*" ]
+    id: "pwMode"
+    icon: "pw"
+    script: [ "research/pw" ]
+    sequences: [ "research/pw" ]
+    parameters: [ "research/pw" ]
+  - probe models: [ "*" ]
+    id: "cfiMode"
+    icon: "cfi"
+    script: [ "research/cfi" ]
+    sequences: [ "research/cfi" ]
+    parameters: [ "research/cfi" ]
+  - probe models: [ "*" ]
+    id: "ceMode"
+    icon: "ce"
+    script: [ "research/ce" ]
+    sequences: [ "research/ce" ]
+    parameters: [ "research/ce" ]
+  - probe models: [ "*" ]
+    id: "rfMode"
+    icon: "rf"
+    script: [ "research/rf" ]
+    sequences: [ "research/rf" ]
+    parameters: [ "research/rf" ]

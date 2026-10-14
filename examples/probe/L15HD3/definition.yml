@@ -1,0 +1,33 @@
+geometry:
+  type: linear
+  elements: 192
+  pitch: 260 microns
+  radius: 0 mm
+  lensThickness: 0.465 mm
+capabilities:
+  scanlines: 384
+  bf: 8
+  tx: 64
+  rx: 32
+  txClock: 120MHz
+  rxClock: 60MHz
+  platform: v3
+stackinfo:
+  elevationHeight: 4.25 mm
+  elevationFocus: 30 mm
+  lowFreq: 5MHz
+  centerFreq: 10MHz
+  upperFreq: 15MHz
+defaults:
+  depth: 3cm
+  dopplerFreq: 7MHz
+  compound angle: 5 degrees
+  extension angle: 15 degrees
+  max steering angle: 15 degrees
+  needle start: 10 degrees
+  needle step: 10 degrees
+freq:
+  start depth: 1cm
+  end depth: 10cm
+  lowFreq: 8MHz
+  upperFreq: 15MHz

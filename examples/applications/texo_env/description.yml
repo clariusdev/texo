@@ -1,0 +1,25 @@
+title: "Envelope Sequence"
+
+probes:
+  - model: "L7*"
+  - model: "L15*"
+  - model: "L20*"
+  - model: "C3*"
+  - model: "C7*"
+  - model: "EC7*"
+  - model: "PA2*"
+
+control:
+  - probe models: [ "*" ]
+    id: target depth
+    assign: endDepth
+    units: cm
+    from: 1
+    to: 30
+    start: 4
+    scripts:
+      - from: 1
+        to: 30
+        script: [ "research/env_ll" ]
+        sequences: [ "research/env_ll" ]
+        parameters: [ "research/env" ]

@@ -1,0 +1,30 @@
+geometry:
+  type: linear
+  elements: 80
+  pitch: 250 microns
+  radius: 0 mm
+  lensThickness: 0 mm
+capabilities:
+  scanlines: 160
+  bf: 8
+  tx: 64
+  rx: 32
+  txClock: 120MHz
+  rxClock: 60MHz
+  platform: v3
+stackinfo:
+  elevationHeight: 13 mm
+  elevationFocus: 80 mm
+  lowFreq: 1MHz
+  centerFreq: 2.4MHz
+  upperFreq: 5MHz
+  phased array: true
+defaults:
+  depth: 10cm
+  dopplerFreq: 2.5MHz
+  cardiac angle: 45 degrees
+freq:
+  start depth: 1cm
+  end depth: 30cm
+  lowFreq: 2MHz
+  upperFreq: 4.5MHz
