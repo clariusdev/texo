@@ -1,0 +1,22 @@
+frames:
+ rf:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  start element: 0
+  end element: "{probe::geometry::elements} - 1"
+  start angle: 0 degrees
+  end angle: 0 degrees
+  lines: "{rfLineDensity}"
+  tgc: b
+  focus:
+   - { focus: "{txFocus}", rx: b, tx: b, dtgcs: [ b ], channels: "all" }
+  decim: "{rfDecimation}"
+  lpf: 0
+  output: RF
+  vsound: "{speedOfSound}"
+  acoustic mode: b
+
+blocks:
+  - id: rf
+    angle: "{steer}"
+    frame: rf

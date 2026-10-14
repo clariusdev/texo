@@ -1,0 +1,10 @@
+params:
+  scAngle: "{probe::defaults::compound angle}"
+  scAngleNeg: "-1.0 * {probe::defaults::compound angle}"
+  scWide: false
+
+  compound blend: -1.0
+  compound weight: 1.0
+  compound low scale: 0.0
+  compound high scale: 0.1
+  compound exponent: 1.1

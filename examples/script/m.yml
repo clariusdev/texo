@@ -1,0 +1,30 @@
+lineformation:
+ m:
+  spectralLine: true
+
+envlog:
+ m:
+  dynrange: "{dr}"
+  noisefloor: "{nf}"
+  decim: "{envDecimation}"
+  filter: 0
+  type: "M pre-scan"
+
+rawdata:
+ m:
+  dataType: iq
+  size: 16MB
+  freq: "{probe::stackinfo::centerFreq}"
+  depth: "{endDepth}"
+  focus: "{txFocus}"
+
+imageprocessing:
+ m:
+  - { type: lineformation, id: m }
+  - { type: rawdata, id: m, enabled: "{storeRaw}" }
+  - { type: envlog, id: m }
+  - { type: compress, id: b }
+  - { type: stream, id: b }
+
+imaging:
+ - { seq: m, imgpro: m, enabled: "{mMode}" }

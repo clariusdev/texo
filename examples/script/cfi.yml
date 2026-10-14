@@ -1,0 +1,47 @@
+tgc:
+ cfi:
+  - { v: "{cfiTgc}", d: 0mm }
+
+lineformation:
+ cfi:
+  accum: 1
+  send: 1
+  firstLine: 0
+  lastLine: 0
+
+compress:
+ cfi:
+  quality: 98%
+
+cfiwfac:
+ cfi:
+  ensemble: "{cfiEnsemble}"
+  prf: "{cfiPrf}"
+  wf: "{cfiWf}"
+  order: 4
+
+cfiproc:
+ cfi:
+  output: "{cfiType}"
+  dynrange: "{cfiDr}"
+  noiseFloor: "{cfiNf}"
+  variance: 70%
+  velocity: 0%
+  clutter: 125dB
+
+cfilf:
+ cfi:
+  ensemble: "{cfiEnsemble}"
+
+# image processing sequence
+imageprocessing:
+ cfi:
+  - { type: lineformation , id: cfi }
+  - { type: cfilf , id: cfi }
+  - { type: cfiwfac, id: cfi }
+  - { type: cfiproc, id: cfi }
+  - { type: compress, id: cfi }
+  - { type: stream, id: b }
+
+imaging:
+ - { seq: cfi, imgpro: cfi, enabled: "{cfiMode}" }

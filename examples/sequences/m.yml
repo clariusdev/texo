@@ -1,0 +1,26 @@
+frames:
+ m:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  start element: "{mLine}"
+  end element: "{mLine}"
+  start angle: 0 degrees
+  end angle: 0 degrees
+  lines: 1
+  tgc: b
+  focus: [ { focus: "{txFocus}", rx: b, tx: b, dtgcs: [ b ], channels: "all" } ]
+  decim: "{iqDecimation}"
+  lpf: "{lpfid}"
+  output: IQ
+  vsound: "{speedOfSound}"
+  duplex:
+    linesPerDma: 8
+    prf: "{mSweep}"
+    blankBTime: 5ms
+  sync: none
+  acoustic mode: m
+
+blocks:
+  - id: m
+    angle: "{steer}"
+    frame: m

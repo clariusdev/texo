@@ -1,0 +1,45 @@
+frames:
+ sc:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  start element: 0
+  end element: "{probe::geometry::elements} - 1"
+  start angle: "{steer}"
+  end angle: "{steer}"
+  lines: "{probe::geometry::elements}"
+  tgc: b
+  afe: b
+  focus:
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: b, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 32 && {mla} == 1" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: binv, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 32 && {mla} == 1 && {pih}" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: b, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 32 && {mla} == 4" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: binv, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 32 && {mla} == 4 && {pih}" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: "-16", tx: b, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 64 && {mla} == 1" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: "-16", tx: binv, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 64 && {mla} == 1 && {pih}" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: +16, tx: b, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 64 && {mla} == 1" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: +16, tx: binv, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 64 && {mla} == 1 && {pih}" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: "-16", tx: b, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 64 && {mla} == 4" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: "-16", tx: binv, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 64 && {mla} == 4 && {pih}" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: +16, tx: b, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 64 && {mla} == 4" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: +16, tx: binv, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 64 && {mla} == 4 && {pih}" }
+  overlap: "{overlap}"
+  decim: "{iqDecimation}"
+  lpf: "{lpfid}"
+  output: IQ
+  vsound: "{speedOfSound}"
+  sync: none
+  acoustic mode: b
+
+blocks:
+  - id: scp1
+    angle: "1.0 * {probe::defaults::compound angle}"
+    frame: sc
+  - id: scp2
+    angle: "2.0 * {probe::defaults::compound angle}"
+    frame: sc
+  - id: scn1
+    angle: "-1.0 * {probe::defaults::compound angle}"
+    frame: sc
+  - id: scn2
+    angle: "-2.0 * {probe::defaults::compound angle}"
+    frame: sc

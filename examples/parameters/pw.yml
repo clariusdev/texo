@@ -1,0 +1,15 @@
+params:
+  pwType: duplex
+  pwStartDepth: "({startDepth} + (({endDepth} - {startDepth}) / 2)) - 2mm"
+  pwEndDepth: "{pwStartDepth} + 4mm"
+  pwSteer: 0 degrees
+  pwTxFreq: "{probe::defaults::dopplerFreq}"
+  pwPulse: +-+-+-+-
+  pwLine: "{probe::geometry::elements} / 2"
+  pwTgc: 20dB
+  pwFft: 128
+  pwPrf: 1kHz
+  pwLrf: 100Hz
+  pwWf: "{pwPrf} * 0.05"
+  pwDr: 40dB
+  pwNf: 10dB

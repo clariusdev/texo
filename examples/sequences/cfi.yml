@@ -1,0 +1,45 @@
+tx:
+ cfi:
+  shape: "{cfiPulse}"
+  freq: "{cfiTxFreq}"
+  fnumber: 1
+  maxApt: 64
+
+rx:
+ cfi:
+  shallow: "{cfiTxFreq}"
+  deep: "{cfiTxFreq}"
+  depth: "{endDepth}"
+  fnumber: 1
+  type: dynamic
+  apod: b
+
+frames:
+ cfi:
+  start: "{cfiStartDepth}"
+  end: "{cfiEndDepth}"
+  start element: "{cfiStartElement}"
+  end element: "{cfiEndElement}"
+  start angle: 0 degrees
+  end angle: 0 degrees
+  lines: "{cfiEndElement} - {cfiStartElement} + 1"
+  tgc: cfi
+  focus:
+    - { focus: "{cfiStartDepth} + (({cfiEndDepth} - {cfiStartDepth}) / 2)", rx: cfi, tx: cfi, dtgcs: [ b ], channels: "all" }
+  decim: "{iqDecimation}"
+  lpf: 0
+  output: IQ
+  vsound: "{speedOfSound}"
+  blankLines: true
+  color:
+   ensemble: "{cfiEnsemble}"
+   prf: "{cfiPrf}"
+   wf: "{cfiWf}"
+   blankDuration: 4ms
+  sync: none
+  acoustic mode: color
+
+blocks:
+  - id: cfi
+    angle: "{cfiSteer}"
+    frame: cfi

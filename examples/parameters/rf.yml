@@ -1,0 +1,3 @@
+params:
+  rfDecimation: "max(1, ceil({endDepth} / 4cm))"
+  rfLineDensity: "{probe::geometry::elements}"

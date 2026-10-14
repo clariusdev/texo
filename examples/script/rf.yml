@@ -1,0 +1,29 @@
+lineformation:
+ rf:
+  accum: 1
+  send: 1
+  firstLine: 0
+  lastLine: 0
+  usePrevTimestamp: true
+
+rawdata:
+ rf:
+  dataType: rf
+  size: 128MB
+  freq: "{txFreq}"
+  depth: "{endDepth}"
+  focus: "{txFocus}"
+  mla: 1
+
+stream:
+ rf:
+  frameRate: 5 Hz
+
+imageprocessing:
+ rf:
+  - { type: lineformation, id: rf }
+  - { type: rawdata, id: rf, enabled: "{storeRaw}" }
+  - { type: stream, id: rf }
+
+imaging:
+ - { seq: rf, imgpro: rf, enabled: "{rfMode}" }

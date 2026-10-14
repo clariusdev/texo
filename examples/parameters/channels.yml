@@ -1,0 +1,20 @@
+params:
+  startDepth: 0cm
+  endDepth: "{probe::defaults::depth}"
+  speedOfSound: 1540 m/s
+  txFocus: "{endDepth} / 2"
+  txFreq: "{probe::stackinfo::centerFreq}"
+  txPulse: +-
+  txApt: "{probe::capabilities::tx}"
+  txFn: 1
+  rxFn: 1
+  rfDecimation: "max(1, ceil({endDepth} / 4cm))"
+  lpfid: 0
+  steer: 0 degrees
+  element: "{probe::geometry::elements} / 2"
+  focusType: "{singleElement} ? none : dynamic"
+  alt: "{probe::capabilities::platform} != v1"
+  singleElement: false
+  viewSingleElement: false
+  rampGain: false
+  storeRaw: false
