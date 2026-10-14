@@ -14,7 +14,6 @@ Across the top, each button shows or hides a panel. Hover a button for its name.
 | Panel | What it shows |
 |-------|---------------|
 | **Probe Connection** | Bluetooth and Wi-Fi connection to the probe (see below). |
-| **Wi-Fi Optimization** | Wireless network settings for the probe. |
 | **Image** | The live scan-converted image and gain controls (see below). |
 | **Raw Image** | Prescan data before scan conversion, with rotate/flip and histogram options. |
 | **Contrast Image** | The contrast-mode image, when a contrast script is running. |
@@ -24,10 +23,6 @@ Across the top, each button shows or hides a panel. Hover a button for its name.
 | **Inertial** | The probe's motion sensor: orientation and calibration. |
 | **Cine Control** | Scroll back through the buffered frames while frozen. |
 | **Parameters** | Live view of the parameter values the probe is running with. |
-| **Sensor Data** | Probe temperature and battery over time, exportable to CSV. |
-| **Statistics** | Frame rate, dropped frames, lag and bandwidth, exportable to CSV. |
-| **Timing** | Acquisition timing for the running sequence. |
-| **Logging** | Probe log messages. |
 | **Data Storage** | Capture settings and capture buttons (see below). |
 | **Settings** | Account, cine buffer size, display calibration, and dark mode. |
 | **Presets** | Loads a script set into the four windows (see below). |
