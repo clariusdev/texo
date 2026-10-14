@@ -1,0 +1,347 @@
+# transmit nodes
+tx:
+ b:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{probe::stackinfo::centerFreq}"
+  fnumber: 1
+  channels: all
+  maxApt: "{probe::capabilities::tx}"
+
+# receive nodes
+rx:
+ b:
+  shallow: "{probe::freq::upperFreq}"
+  deep: "{probe::freq::lowFreq}"
+  depth: "{probe::freq::end depth}"
+  fnumber: 1
+  channels: all
+  type: dynamic
+  apod: b
+  dtgc: b
+ rx25:
+  shallow: "{probe::freq::upperFreq}"
+  deep: "{probe::freq::lowFreq}"
+  depth: "{probe::freq::end depth}"
+  fnumber: 1
+  channels: all
+  type: dynamic
+  apod: b
+  dtgc: d25
+ rx75:
+  shallow: "{probe::freq::upperFreq}"
+  deep: "{probe::freq::lowFreq}"
+  depth: "{probe::freq::end depth}"
+  fnumber: 1
+  channels: all
+  type: dynamic
+  apod: b
+  dtgc: d75
+
+seq:
+ # sla sequence
+ sla:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  targetLineDuration: 0 microseconds
+  events:
+      - { el: "0", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "1", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "2", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "3", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "4", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "5", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "6", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "7", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "8", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "9", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "10", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "11", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "12", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "13", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "14", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "15", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "16", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "17", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "18", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "19", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "20", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "21", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "22", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "23", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "24", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "25", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "26", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "27", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "28", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "29", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "30", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "31", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "32", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "33", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "34", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "35", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "36", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "37", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "38", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "39", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "40", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "41", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "42", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "43", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "44", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "45", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "46", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "47", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "48", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "49", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "50", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "51", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "52", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "53", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "54", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "55", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "56", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "57", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "58", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "59", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "60", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "61", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "62", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "63", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "64", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "65", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "66", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "67", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "68", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "69", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "70", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "71", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "72", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "73", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "74", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "75", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "76", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "77", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "78", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "79", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "80", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "81", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "82", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "83", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "84", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "85", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "86", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "87", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "88", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "89", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "90", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "91", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "92", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "93", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "94", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "95", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "96", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "97", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "98", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "99", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "100", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "101", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "102", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "103", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "104", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "105", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "106", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "107", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "108", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "109", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "110", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "111", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "112", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "113", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "114", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "115", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "116", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "117", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "118", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "119", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "120", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "121", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "122", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "123", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "124", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "125", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "126", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "127", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "128", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "129", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "130", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "131", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "132", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "133", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "134", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "135", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "136", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "137", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "138", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "139", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "140", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "141", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "142", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "143", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "144", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "145", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "146", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "147", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "148", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "149", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "150", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "151", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "152", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "153", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "154", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "155", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "156", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "157", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "158", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "159", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "160", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "161", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "162", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "163", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "164", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "165", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "166", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "167", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "168", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "169", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "170", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "171", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "172", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "173", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "174", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "175", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "176", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "177", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "178", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "179", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "180", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "181", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "182", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "183", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "184", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "185", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "186", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "187", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "188", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "189", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "190", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+      - { el: "191", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { rx: b } ], tgc: b }
+  decim: "{iqDecimation}"
+  vsound: "{speedOfSound}"
+  output: IQ
+ # mla 4 sequence with 2 lines overlap to remove artefacts
+ mla:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  targetLineDuration: 0 microseconds
+  events:
+     - { el: "0+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "0+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "4+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "4+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "8+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "8+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "12+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "12+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "16+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "16+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "20+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "20+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "24+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "24+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "28+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "28+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "32+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "32+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "36+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "36+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "40+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "40+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "44+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "44+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "48+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "48+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "52+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "52+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "56+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "56+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "60+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "60+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "64+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "64+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "68+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "68+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "72+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "72+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "76+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "76+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "80+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "80+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "84+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "84+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "88+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "88+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "92+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "92+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "96+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "96+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "100+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "100+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "104+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "104+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "108+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "108+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "112+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "112+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "116+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "116+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "120+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "120+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "124+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "124+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "128+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "128+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "132+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "132+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "136+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "136+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "140+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "140+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "144+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "144+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "148+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "148+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "152+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "152+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "156+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "156+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "160+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "160+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "164+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "164+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "168+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "168+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "172+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "172+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "176+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "176+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "180+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "180+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "184+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "184+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+     - { el: "188+{txoffseta}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1a}", rx: rx25 }, { el-offset: "{rxoffset2a}", rx: rx75 }, { el-offset: "{rxoffset3a}", rx: rx75 }, { el-offset: "{rxoffset4a}", rx: rx25 }], tgc: b }
+     - { el: "188+{txoffsetb}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: b, rx: [ { el-offset: "{rxoffset1b}", rx: rx75 }, { el-offset: "{rxoffset2b}", rx: rx25 }, { el-offset: "{rxoffset3b}", rx: rx25 }, { el-offset: "{rxoffset4b}", rx: rx75 }], tgc: b }
+  decim: "{iqDecimation}"
+  vsound: "{speedOfSound}"
+  output: IQ

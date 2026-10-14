@@ -1,0 +1,5 @@
+imaging:
+ - { seq: scp1, imgpro: b, enabled: "{scMode}" }
+ - { seq: scp2, imgpro: b, enabled: "{scMode} && {scWide}" }
+ - { seq: scn1, imgpro: b, enabled: "{scMode}" }
+ - { seq: scn2, imgpro: b, enabled: "{scMode} && {scWide}" }

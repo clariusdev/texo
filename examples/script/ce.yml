@@ -1,0 +1,35 @@
+ceus:
+ vpp: 10V
+ vnn: 10V
+ enabled: "{ceMode}"
+
+envlog:
+ ce:
+  dynrange: "{ceDr}"
+  noisefloor: "{ceNf}"
+  decim: "{envDecimation}"
+  filter: 0
+  type: "contrast pre-scan"
+
+rawdata:
+ ce:
+  dataType: ce
+  size: 64MB
+  freq: "{txFreq}"
+  depth: "{endDepth}"
+  focus: "{txFocus}"
+  mla: "{mla}"
+
+imageprocessing:
+ ce:
+  - { type: envlog, id: ce }
+  - { type: rawdata, id: ce, enabled: "{storeRaw}" }
+  - { type: compress, id: b }
+  - { type: stream, id: b }
+
+# putting it all together
+imaging:
+  # select the dedicated sequence for am
+  - { seq: ce, imgpro: b, enabled: "{ceAmMode}" }
+  # no seq since it is forwarded from b
+  - { imgpro: ce, enabled: "{ceMode}" }

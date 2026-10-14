@@ -1,0 +1,2594 @@
+# transmit beams
+tx:
+ all:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: all
+  maxApt: "{txApt}"
+ 0:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 0
+  maxApt: "{txApt}"
+ 1:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 1
+  maxApt: "{txApt}"
+ 2:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 2
+  maxApt: "{txApt}"
+ 3:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 3
+  maxApt: "{txApt}"
+ 4:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 4
+  maxApt: "{txApt}"
+ 5:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 5
+  maxApt: "{txApt}"
+ 6:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 6
+  maxApt: "{txApt}"
+ 7:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 7
+  maxApt: "{txApt}"
+ 8:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 8
+  maxApt: "{txApt}"
+ 9:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 9
+  maxApt: "{txApt}"
+ 10:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 10
+  maxApt: "{txApt}"
+ 11:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 11
+  maxApt: "{txApt}"
+ 12:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 12
+  maxApt: "{txApt}"
+ 13:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 13
+  maxApt: "{txApt}"
+ 14:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 14
+  maxApt: "{txApt}"
+ 15:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 15
+  maxApt: "{txApt}"
+ 16:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 16
+  maxApt: "{txApt}"
+ 17:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 17
+  maxApt: "{txApt}"
+ 18:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 18
+  maxApt: "{txApt}"
+ 19:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 19
+  maxApt: "{txApt}"
+ 20:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 20
+  maxApt: "{txApt}"
+ 21:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 21
+  maxApt: "{txApt}"
+ 22:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 22
+  maxApt: "{txApt}"
+ 23:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 23
+  maxApt: "{txApt}"
+ 24:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 24
+  maxApt: "{txApt}"
+ 25:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 25
+  maxApt: "{txApt}"
+ 26:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 26
+  maxApt: "{txApt}"
+ 27:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 27
+  maxApt: "{txApt}"
+ 28:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 28
+  maxApt: "{txApt}"
+ 29:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 29
+  maxApt: "{txApt}"
+ 30:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 30
+  maxApt: "{txApt}"
+ 31:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 31
+  maxApt: "{txApt}"
+ 32:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 32
+  maxApt: "{txApt}"
+ 33:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 33
+  maxApt: "{txApt}"
+ 34:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 34
+  maxApt: "{txApt}"
+ 35:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 35
+  maxApt: "{txApt}"
+ 36:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 36
+  maxApt: "{txApt}"
+ 37:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 37
+  maxApt: "{txApt}"
+ 38:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 38
+  maxApt: "{txApt}"
+ 39:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 39
+  maxApt: "{txApt}"
+ 40:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 40
+  maxApt: "{txApt}"
+ 41:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 41
+  maxApt: "{txApt}"
+ 42:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 42
+  maxApt: "{txApt}"
+ 43:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 43
+  maxApt: "{txApt}"
+ 44:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 44
+  maxApt: "{txApt}"
+ 45:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 45
+  maxApt: "{txApt}"
+ 46:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 46
+  maxApt: "{txApt}"
+ 47:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 47
+  maxApt: "{txApt}"
+ 48:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 48
+  maxApt: "{txApt}"
+ 49:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 49
+  maxApt: "{txApt}"
+ 50:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 50
+  maxApt: "{txApt}"
+ 51:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 51
+  maxApt: "{txApt}"
+ 52:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 52
+  maxApt: "{txApt}"
+ 53:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 53
+  maxApt: "{txApt}"
+ 54:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 54
+  maxApt: "{txApt}"
+ 55:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 55
+  maxApt: "{txApt}"
+ 56:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 56
+  maxApt: "{txApt}"
+ 57:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 57
+  maxApt: "{txApt}"
+ 58:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 58
+  maxApt: "{txApt}"
+ 59:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 59
+  maxApt: "{txApt}"
+ 60:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 60
+  maxApt: "{txApt}"
+ 61:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 61
+  maxApt: "{txApt}"
+ 62:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 62
+  maxApt: "{txApt}"
+ 63:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 63
+  maxApt: "{txApt}"
+ 64:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 64
+  maxApt: "{txApt}"
+ 65:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 65
+  maxApt: "{txApt}"
+ 66:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 66
+  maxApt: "{txApt}"
+ 67:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 67
+  maxApt: "{txApt}"
+ 68:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 68
+  maxApt: "{txApt}"
+ 69:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 69
+  maxApt: "{txApt}"
+ 70:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 70
+  maxApt: "{txApt}"
+ 71:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 71
+  maxApt: "{txApt}"
+ 72:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 72
+  maxApt: "{txApt}"
+ 73:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 73
+  maxApt: "{txApt}"
+ 74:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 74
+  maxApt: "{txApt}"
+ 75:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 75
+  maxApt: "{txApt}"
+ 76:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 76
+  maxApt: "{txApt}"
+ 77:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 77
+  maxApt: "{txApt}"
+ 78:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 78
+  maxApt: "{txApt}"
+ 79:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 79
+  maxApt: "{txApt}"
+ 80:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 80
+  maxApt: "{txApt}"
+ 81:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 81
+  maxApt: "{txApt}"
+ 82:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 82
+  maxApt: "{txApt}"
+ 83:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 83
+  maxApt: "{txApt}"
+ 84:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 84
+  maxApt: "{txApt}"
+ 85:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 85
+  maxApt: "{txApt}"
+ 86:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 86
+  maxApt: "{txApt}"
+ 87:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 87
+  maxApt: "{txApt}"
+ 88:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 88
+  maxApt: "{txApt}"
+ 89:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 89
+  maxApt: "{txApt}"
+ 90:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 90
+  maxApt: "{txApt}"
+ 91:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 91
+  maxApt: "{txApt}"
+ 92:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 92
+  maxApt: "{txApt}"
+ 93:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 93
+  maxApt: "{txApt}"
+ 94:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 94
+  maxApt: "{txApt}"
+ 95:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 95
+  maxApt: "{txApt}"
+ 96:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 96
+  maxApt: "{txApt}"
+ 97:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 97
+  maxApt: "{txApt}"
+ 98:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 98
+  maxApt: "{txApt}"
+ 99:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 99
+  maxApt: "{txApt}"
+ 100:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 100
+  maxApt: "{txApt}"
+ 101:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 101
+  maxApt: "{txApt}"
+ 102:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 102
+  maxApt: "{txApt}"
+ 103:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 103
+  maxApt: "{txApt}"
+ 104:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 104
+  maxApt: "{txApt}"
+ 105:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 105
+  maxApt: "{txApt}"
+ 106:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 106
+  maxApt: "{txApt}"
+ 107:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 107
+  maxApt: "{txApt}"
+ 108:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 108
+  maxApt: "{txApt}"
+ 109:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 109
+  maxApt: "{txApt}"
+ 110:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 110
+  maxApt: "{txApt}"
+ 111:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 111
+  maxApt: "{txApt}"
+ 112:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 112
+  maxApt: "{txApt}"
+ 113:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 113
+  maxApt: "{txApt}"
+ 114:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 114
+  maxApt: "{txApt}"
+ 115:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 115
+  maxApt: "{txApt}"
+ 116:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 116
+  maxApt: "{txApt}"
+ 117:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 117
+  maxApt: "{txApt}"
+ 118:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 118
+  maxApt: "{txApt}"
+ 119:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 119
+  maxApt: "{txApt}"
+ 120:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 120
+  maxApt: "{txApt}"
+ 121:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 121
+  maxApt: "{txApt}"
+ 122:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 122
+  maxApt: "{txApt}"
+ 123:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 123
+  maxApt: "{txApt}"
+ 124:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 124
+  maxApt: "{txApt}"
+ 125:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 125
+  maxApt: "{txApt}"
+ 126:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 126
+  maxApt: "{txApt}"
+ 127:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 127
+  maxApt: "{txApt}"
+ 128:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 128
+  maxApt: "{txApt}"
+ 129:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 129
+  maxApt: "{txApt}"
+ 130:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 130
+  maxApt: "{txApt}"
+ 131:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 131
+  maxApt: "{txApt}"
+ 132:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 132
+  maxApt: "{txApt}"
+ 133:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 133
+  maxApt: "{txApt}"
+ 134:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 134
+  maxApt: "{txApt}"
+ 135:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 135
+  maxApt: "{txApt}"
+ 136:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 136
+  maxApt: "{txApt}"
+ 137:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 137
+  maxApt: "{txApt}"
+ 138:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 138
+  maxApt: "{txApt}"
+ 139:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 139
+  maxApt: "{txApt}"
+ 140:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 140
+  maxApt: "{txApt}"
+ 141:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 141
+  maxApt: "{txApt}"
+ 142:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 142
+  maxApt: "{txApt}"
+ 143:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 143
+  maxApt: "{txApt}"
+ 144:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 144
+  maxApt: "{txApt}"
+ 145:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 145
+  maxApt: "{txApt}"
+ 146:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 146
+  maxApt: "{txApt}"
+ 147:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 147
+  maxApt: "{txApt}"
+ 150:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 150
+  maxApt: "{txApt}"
+ 151:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 151
+  maxApt: "{txApt}"
+ 152:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 152
+  maxApt: "{txApt}"
+ 153:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 153
+  maxApt: "{txApt}"
+ 154:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 154
+  maxApt: "{txApt}"
+ 155:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 155
+  maxApt: "{txApt}"
+ 156:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 156
+  maxApt: "{txApt}"
+ 157:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 157
+  maxApt: "{txApt}"
+ 158:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 158
+  maxApt: "{txApt}"
+ 159:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 159
+  maxApt: "{txApt}"
+ 160:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 160
+  maxApt: "{txApt}"
+ 161:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 161
+  maxApt: "{txApt}"
+ 162:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 162
+  maxApt: "{txApt}"
+ 163:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 163
+  maxApt: "{txApt}"
+ 164:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 164
+  maxApt: "{txApt}"
+ 165:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 165
+  maxApt: "{txApt}"
+ 166:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 166
+  maxApt: "{txApt}"
+ 167:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 167
+  maxApt: "{txApt}"
+ 168:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 168
+  maxApt: "{txApt}"
+ 169:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 169
+  maxApt: "{txApt}"
+ 170:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 170
+  maxApt: "{txApt}"
+ 171:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 171
+  maxApt: "{txApt}"
+ 172:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 172
+  maxApt: "{txApt}"
+ 173:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 173
+  maxApt: "{txApt}"
+ 174:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 174
+  maxApt: "{txApt}"
+ 175:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 175
+  maxApt: "{txApt}"
+ 176:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 176
+  maxApt: "{txApt}"
+ 177:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 177
+  maxApt: "{txApt}"
+ 178:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 178
+  maxApt: "{txApt}"
+ 179:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 179
+  maxApt: "{txApt}"
+ 180:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 180
+  maxApt: "{txApt}"
+ 181:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 181
+  maxApt: "{txApt}"
+ 182:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 182
+  maxApt: "{txApt}"
+ 183:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 183
+  maxApt: "{txApt}"
+ 184:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 184
+  maxApt: "{txApt}"
+ 185:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 185
+  maxApt: "{txApt}"
+ 186:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 186
+  maxApt: "{txApt}"
+ 187:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 187
+  maxApt: "{txApt}"
+ 188:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 188
+  maxApt: "{txApt}"
+ 189:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 189
+  maxApt: "{txApt}"
+ 190:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 190
+  maxApt: "{txApt}"
+ 191:
+  shape: "{txPulse}"
+  focus: "{txFocus}"
+  freq: "{txFreq}"
+  fnumber: "{txFn}"
+  channels: 191
+  maxApt: "{txApt}"
+
+# receive beams
+rx:
+ 0:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 0
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 1:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 1
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 2:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 2
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 3:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 3
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 4:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 4
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 5:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 5
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 6:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 6
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 7:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 7
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 8:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 8
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 9:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 9
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 10:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 10
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 11:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 11
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 12:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 12
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 13:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 13
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 14:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 14
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 15:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 15
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 16:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 16
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 17:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 17
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 18:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 18
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 19:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 19
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 20:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 20
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 21:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 21
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 22:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 22
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 23:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 23
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 24:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 24
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 25:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 25
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 26:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 26
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 27:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 27
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 28:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 28
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 29:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 29
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 30:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 30
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 31:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 31
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 32:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 32
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 33:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 33
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 34:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 34
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 35:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 35
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 36:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 36
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 37:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 37
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 38:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 38
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 39:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 39
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 40:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 40
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 41:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 41
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 42:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 42
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 43:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 43
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 44:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 44
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 45:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 45
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 46:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 46
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 47:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 47
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 48:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 48
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 49:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 49
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 50:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 50
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 51:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 51
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 52:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 52
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 53:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 53
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 54:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 54
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 55:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 55
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 56:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 56
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 57:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 57
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 58:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 58
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 59:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 59
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 60:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 60
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 61:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 61
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 62:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 62
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 63:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 63
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 64:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 64
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 65:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 65
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 66:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 66
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 67:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 67
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 68:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 68
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 69:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 69
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 70:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 70
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 71:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 71
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 72:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 72
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 73:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 73
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 74:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 74
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 75:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 75
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 76:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 76
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 77:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 77
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 78:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 78
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 79:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 79
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 80:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 80
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 81:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 81
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 82:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 82
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 83:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 83
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 84:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 84
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 85:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 85
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 86:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 86
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 87:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 87
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 88:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 88
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 89:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 89
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 90:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 90
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 91:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 91
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 92:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 92
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 93:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 93
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 94:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 94
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+ 95:
+  shallow: "{txFreq}"
+  deep: "{txFreq}"
+  depth: "{endDepth}"
+  fnumber: "{rxFn}"
+  channels: 95
+  type: "{focusType}"
+  apod: ch
+  dtgc: ch
+
+# sequence description
+# 192 lines - beamforming on el and off 0.5
+seq:
+ channelWalk32:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  targetLineDuration: 0 microseconds
+  events:
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 0 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 1 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 2 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 3 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 4 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 5 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 6 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 7 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 8 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 9 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 10 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 11 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 12 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 13 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 14 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 15 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 16 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 17 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 18 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 19 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 20 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 21 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 22 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 23 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 24 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 25 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 26 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 27 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 28 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 29 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 30 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 31 } ], tgc: ch }
+  decim: "{rfDecimation}"
+  vsound: "{speedOfSound}"
+  output: Channel
+ channelWalk32Alt:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  targetLineDuration: 0 microseconds
+  events:
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 0 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 16 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 1 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 17 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 2 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 18 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 3 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 19 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 4 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 20 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 5 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 21 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 6 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 22 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 7 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 23 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 8 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 24 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 9 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 25 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 10 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 26 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 11 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 27 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 12 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 28 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 13 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 29 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 14 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 30 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 15 } ], tgc: ch }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 31 } ], tgc: ch }
+  decim: "{rfDecimation}"
+  vsound: "{speedOfSound}"
+  output: Channel
+ channelWalk96:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  targetLineDuration: 0 microseconds
+  events:
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 0 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 1 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 2 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 3 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 4 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 5 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 6 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 7 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 8 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 9 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 10 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 11 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 12 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 13 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 14 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 15 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 16 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 17 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 18 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 19 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 20 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 21 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 22 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 23 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 24 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 25 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 26 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 27 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 28 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 29 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 30 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 31 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 32 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 33 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 34 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 35 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 36 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 37 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 38 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 39 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 40 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 41 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 42 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 43 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 44 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 45 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 46 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 47 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 48 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 49 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 50 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 51 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 52 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 53 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 54 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 55 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 56 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 57 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 58 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 59 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 60 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 61 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 62 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 63 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 64 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 65 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 66 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 67 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 68 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 69 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 70 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 71 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 72 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 73 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 74 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 75 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 76 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 77 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 78 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 79 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 80 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 81 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 82 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 83 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 84 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 85 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 86 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 87 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 88 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 89 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 90 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 91 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 92 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 93 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 94 } ], tgc: ch, psSync: true }
+      - { el: "{element}", txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: all, rx: [ { rx: 95 } ], tgc: ch, psSync: true }
+  decim: "{rfDecimation}"
+  vsound: "{speedOfSound}"
+  output: Channel
+ singleElement32:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  targetLineDuration: 0 microseconds
+  events:
+      - { el: 0, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 0, rx: [ { rx: 0 } ], tgc: ch }
+      - { el: 1, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 32, rx: [ { rx: 16 } ], tgc: ch }
+      - { el: 2, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 1, rx: [ { rx: 1 } ], tgc: ch }
+      - { el: 3, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 33, rx: [ { rx: 17 } ], tgc: ch }
+      - { el: 4, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 2, rx: [ { rx: 2 } ], tgc: ch }
+      - { el: 5, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 34, rx: [ { rx: 18 } ], tgc: ch }
+      - { el: 6, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 3, rx: [ { rx: 3 } ], tgc: ch }
+      - { el: 7, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 35, rx: [ { rx: 19 } ], tgc: ch }
+      - { el: 8, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 4, rx: [ { rx: 4 } ], tgc: ch }
+      - { el: 9, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 36, rx: [ { rx: 20 } ], tgc: ch }
+      - { el: 10, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 5, rx: [ { rx: 5 } ], tgc: ch }
+      - { el: 11, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 37, rx: [ { rx: 21 } ], tgc: ch }
+      - { el: 12, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 6, rx: [ { rx: 6 } ], tgc: ch }
+      - { el: 13, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 38, rx: [ { rx: 22 } ], tgc: ch }
+      - { el: 14, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 7, rx: [ { rx: 7 } ], tgc: ch }
+      - { el: 15, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 39, rx: [ { rx: 23 } ], tgc: ch }
+      - { el: 16, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 8, rx: [ { rx: 8 } ], tgc: ch }
+      - { el: 17, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 40, rx: [ { rx: 24 } ], tgc: ch }
+      - { el: 18, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 9, rx: [ { rx: 9 } ], tgc: ch }
+      - { el: 19, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 41, rx: [ { rx: 25 } ], tgc: ch }
+      - { el: 20, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 10, rx: [ { rx: 10 } ], tgc: ch }
+      - { el: 21, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 42, rx: [ { rx: 26 } ], tgc: ch }
+      - { el: 22, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 11, rx: [ { rx: 11 } ], tgc: ch }
+      - { el: 23, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 43, rx: [ { rx: 27 } ], tgc: ch }
+      - { el: 24, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 12, rx: [ { rx: 12 } ], tgc: ch }
+      - { el: 25, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 44, rx: [ { rx: 28 } ], tgc: ch }
+      - { el: 26, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 13, rx: [ { rx: 13 } ], tgc: ch }
+      - { el: 27, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 45, rx: [ { rx: 29 } ], tgc: ch }
+      - { el: 28, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 14, rx: [ { rx: 14 } ], tgc: ch }
+      - { el: 29, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 46, rx: [ { rx: 30 } ], tgc: ch }
+      - { el: 30, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 15, rx: [ { rx: 15 } ], tgc: ch }
+      - { el: 31, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 47, rx: [ { rx: 31 } ], tgc: ch }
+      - { el: 32, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 16, rx: [ { rx: 0 } ], tgc: ch }
+      - { el: 33, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 48, rx: [ { rx: 16 } ], tgc: ch }
+      - { el: 34, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 17, rx: [ { rx: 1 } ], tgc: ch }
+      - { el: 35, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 49, rx: [ { rx: 17 } ], tgc: ch }
+      - { el: 36, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 18, rx: [ { rx: 2 } ], tgc: ch }
+      - { el: 37, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 50, rx: [ { rx: 18 } ], tgc: ch }
+      - { el: 38, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 19, rx: [ { rx: 3 } ], tgc: ch }
+      - { el: 39, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 51, rx: [ { rx: 19 } ], tgc: ch }
+      - { el: 40, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 20, rx: [ { rx: 4 } ], tgc: ch }
+      - { el: 41, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 52, rx: [ { rx: 20 } ], tgc: ch }
+      - { el: 42, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 21, rx: [ { rx: 5 } ], tgc: ch }
+      - { el: 43, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 53, rx: [ { rx: 21 } ], tgc: ch }
+      - { el: 44, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 22, rx: [ { rx: 6 } ], tgc: ch }
+      - { el: 45, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 54, rx: [ { rx: 22 } ], tgc: ch }
+      - { el: 46, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 23, rx: [ { rx: 7 } ], tgc: ch }
+      - { el: 47, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 55, rx: [ { rx: 23 } ], tgc: ch }
+      - { el: 48, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 24, rx: [ { rx: 8 } ], tgc: ch }
+      - { el: 49, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 56, rx: [ { rx: 24 } ], tgc: ch }
+      - { el: 50, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 25, rx: [ { rx: 9 } ], tgc: ch }
+      - { el: 51, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 57, rx: [ { rx: 25 } ], tgc: ch }
+      - { el: 52, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 26, rx: [ { rx: 10 } ], tgc: ch }
+      - { el: 53, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 58, rx: [ { rx: 26 } ], tgc: ch }
+      - { el: 54, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 27, rx: [ { rx: 11 } ], tgc: ch }
+      - { el: 55, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 59, rx: [ { rx: 27 } ], tgc: ch }
+      - { el: 56, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 28, rx: [ { rx: 12 } ], tgc: ch }
+      - { el: 57, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 60, rx: [ { rx: 28 } ], tgc: ch }
+      - { el: 58, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 29, rx: [ { rx: 13 } ], tgc: ch }
+      - { el: 59, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 61, rx: [ { rx: 29 } ], tgc: ch }
+      - { el: 60, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 30, rx: [ { rx: 14 } ], tgc: ch }
+      - { el: 61, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 62, rx: [ { rx: 30 } ], tgc: ch }
+      - { el: 62, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 31, rx: [ { rx: 15 } ], tgc: ch }
+      - { el: 63, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 63, rx: [ { rx: 31 } ], tgc: ch }
+      - { el: 64, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 0, rx: [ { rx: 0 } ], tgc: ch }
+      - { el: 65, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 32, rx: [ { rx: 16 } ], tgc: ch }
+      - { el: 66, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 1, rx: [ { rx: 1 } ], tgc: ch }
+      - { el: 67, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 33, rx: [ { rx: 17 } ], tgc: ch }
+      - { el: 68, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 2, rx: [ { rx: 2 } ], tgc: ch }
+      - { el: 69, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 34, rx: [ { rx: 18 } ], tgc: ch }
+      - { el: 70, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 3, rx: [ { rx: 3 } ], tgc: ch }
+      - { el: 71, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 35, rx: [ { rx: 19 } ], tgc: ch }
+      - { el: 72, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 4, rx: [ { rx: 4 } ], tgc: ch }
+      - { el: 73, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 36, rx: [ { rx: 20 } ], tgc: ch }
+      - { el: 74, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 5, rx: [ { rx: 5 } ], tgc: ch }
+      - { el: 75, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 37, rx: [ { rx: 21 } ], tgc: ch }
+      - { el: 76, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 6, rx: [ { rx: 6 } ], tgc: ch }
+      - { el: 77, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 38, rx: [ { rx: 22 } ], tgc: ch }
+      - { el: 78, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 7, rx: [ { rx: 7 } ], tgc: ch }
+      - { el: 79, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 39, rx: [ { rx: 23 } ], tgc: ch }
+      - { el: 80, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 8, rx: [ { rx: 8 } ], tgc: ch }
+      - { el: 81, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 40, rx: [ { rx: 24 } ], tgc: ch }
+      - { el: 82, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 9, rx: [ { rx: 9 } ], tgc: ch }
+      - { el: 83, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 41, rx: [ { rx: 25 } ], tgc: ch }
+      - { el: 84, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 10, rx: [ { rx: 10 } ], tgc: ch }
+      - { el: 85, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 42, rx: [ { rx: 26 } ], tgc: ch }
+      - { el: 86, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 11, rx: [ { rx: 11 } ], tgc: ch }
+      - { el: 87, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 43, rx: [ { rx: 27 } ], tgc: ch }
+      - { el: 88, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 12, rx: [ { rx: 12 } ], tgc: ch }
+      - { el: 89, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 44, rx: [ { rx: 28 } ], tgc: ch }
+      - { el: 90, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 13, rx: [ { rx: 13 } ], tgc: ch }
+      - { el: 91, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 45, rx: [ { rx: 29 } ], tgc: ch }
+      - { el: 92, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 14, rx: [ { rx: 14 } ], tgc: ch }
+      - { el: 93, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 46, rx: [ { rx: 30 } ], tgc: ch }
+      - { el: 94, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 15, rx: [ { rx: 15 } ], tgc: ch }
+      - { el: 95, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 47, rx: [ { rx: 31 } ], tgc: ch }
+      - { el: 96, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 16, rx: [ { rx: 0 } ], tgc: ch }
+      - { el: 97, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 48, rx: [ { rx: 16 } ], tgc: ch }
+      - { el: 98, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 17, rx: [ { rx: 1 } ], tgc: ch }
+      - { el: 99, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 49, rx: [ { rx: 17 } ], tgc: ch }
+      - { el: 100, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 18, rx: [ { rx: 2 } ], tgc: ch }
+      - { el: 101, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 50, rx: [ { rx: 18 } ], tgc: ch }
+      - { el: 102, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 19, rx: [ { rx: 3 } ], tgc: ch }
+      - { el: 103, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 51, rx: [ { rx: 19 } ], tgc: ch }
+      - { el: 104, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 20, rx: [ { rx: 4 } ], tgc: ch }
+      - { el: 105, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 52, rx: [ { rx: 20 } ], tgc: ch }
+      - { el: 106, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 21, rx: [ { rx: 5 } ], tgc: ch }
+      - { el: 107, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 53, rx: [ { rx: 21 } ], tgc: ch }
+      - { el: 108, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 22, rx: [ { rx: 6 } ], tgc: ch }
+      - { el: 109, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 54, rx: [ { rx: 22 } ], tgc: ch }
+      - { el: 110, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 23, rx: [ { rx: 7 } ], tgc: ch }
+      - { el: 111, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 55, rx: [ { rx: 23 } ], tgc: ch }
+      - { el: 112, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 24, rx: [ { rx: 8 } ], tgc: ch }
+      - { el: 113, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 56, rx: [ { rx: 24 } ], tgc: ch }
+      - { el: 114, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 25, rx: [ { rx: 9 } ], tgc: ch }
+      - { el: 115, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 57, rx: [ { rx: 25 } ], tgc: ch }
+      - { el: 116, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 26, rx: [ { rx: 10 } ], tgc: ch }
+      - { el: 117, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 58, rx: [ { rx: 26 } ], tgc: ch }
+      - { el: 118, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 27, rx: [ { rx: 11 } ], tgc: ch }
+      - { el: 119, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 59, rx: [ { rx: 27 } ], tgc: ch }
+      - { el: 120, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 28, rx: [ { rx: 12 } ], tgc: ch }
+      - { el: 121, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 60, rx: [ { rx: 28 } ], tgc: ch }
+      - { el: 122, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 29, rx: [ { rx: 13 } ], tgc: ch }
+      - { el: 123, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 61, rx: [ { rx: 29 } ], tgc: ch }
+      - { el: 124, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 30, rx: [ { rx: 14 } ], tgc: ch }
+      - { el: 125, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 62, rx: [ { rx: 30 } ], tgc: ch }
+      - { el: 126, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 31, rx: [ { rx: 15 } ], tgc: ch }
+      - { el: 127, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 63, rx: [ { rx: 31 } ], tgc: ch }
+      - { el: 128, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 0, rx: [ { rx: 0 } ], tgc: ch }
+      - { el: 129, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 32, rx: [ { rx: 16 } ], tgc: ch }
+      - { el: 130, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 1, rx: [ { rx: 1 } ], tgc: ch }
+      - { el: 131, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 33, rx: [ { rx: 17 } ], tgc: ch }
+      - { el: 132, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 2, rx: [ { rx: 2 } ], tgc: ch }
+      - { el: 133, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 34, rx: [ { rx: 18 } ], tgc: ch }
+      - { el: 134, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 3, rx: [ { rx: 3 } ], tgc: ch }
+      - { el: 135, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 35, rx: [ { rx: 19 } ], tgc: ch }
+      - { el: 136, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 4, rx: [ { rx: 4 } ], tgc: ch }
+      - { el: 137, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 36, rx: [ { rx: 20 } ], tgc: ch }
+      - { el: 138, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 5, rx: [ { rx: 5 } ], tgc: ch }
+      - { el: 139, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 37, rx: [ { rx: 21 } ], tgc: ch }
+      - { el: 140, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 6, rx: [ { rx: 6 } ], tgc: ch }
+      - { el: 141, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 38, rx: [ { rx: 22 } ], tgc: ch }
+      - { el: 142, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 7, rx: [ { rx: 7 } ], tgc: ch }
+      - { el: 143, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 39, rx: [ { rx: 23 } ], tgc: ch }
+      - { el: 144, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 8, rx: [ { rx: 8 } ], tgc: ch }
+      - { el: 145, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 40, rx: [ { rx: 24 } ], tgc: ch }
+      - { el: 146, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 9, rx: [ { rx: 9 } ], tgc: ch }
+      - { el: 147, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 41, rx: [ { rx: 25 } ], tgc: ch }
+      - { el: 148, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 10, rx: [ { rx: 10 } ], tgc: ch }
+      - { el: 149, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 42, rx: [ { rx: 26 } ], tgc: ch }
+      - { el: 150, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 11, rx: [ { rx: 11 } ], tgc: ch }
+      - { el: 151, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 43, rx: [ { rx: 27 } ], tgc: ch }
+      - { el: 152, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 12, rx: [ { rx: 12 } ], tgc: ch }
+      - { el: 153, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 44, rx: [ { rx: 28 } ], tgc: ch }
+      - { el: 154, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 13, rx: [ { rx: 13 } ], tgc: ch }
+      - { el: 155, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 45, rx: [ { rx: 29 } ], tgc: ch }
+      - { el: 156, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 14, rx: [ { rx: 14 } ], tgc: ch }
+      - { el: 157, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 46, rx: [ { rx: 30 } ], tgc: ch }
+      - { el: 158, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 15, rx: [ { rx: 15 } ], tgc: ch }
+      - { el: 159, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 47, rx: [ { rx: 31 } ], tgc: ch }
+      - { el: 160, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 16, rx: [ { rx: 0 } ], tgc: ch }
+      - { el: 161, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 48, rx: [ { rx: 16 } ], tgc: ch }
+      - { el: 162, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 17, rx: [ { rx: 1 } ], tgc: ch }
+      - { el: 163, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 49, rx: [ { rx: 17 } ], tgc: ch }
+      - { el: 164, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 18, rx: [ { rx: 2 } ], tgc: ch }
+      - { el: 165, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 50, rx: [ { rx: 18 } ], tgc: ch }
+      - { el: 166, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 19, rx: [ { rx: 3 } ], tgc: ch }
+      - { el: 167, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 51, rx: [ { rx: 19 } ], tgc: ch }
+      - { el: 168, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 20, rx: [ { rx: 4 } ], tgc: ch }
+      - { el: 169, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 52, rx: [ { rx: 20 } ], tgc: ch }
+      - { el: 170, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 21, rx: [ { rx: 5 } ], tgc: ch }
+      - { el: 171, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 53, rx: [ { rx: 21 } ], tgc: ch }
+      - { el: 172, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 22, rx: [ { rx: 6} ], tgc: ch }
+      - { el: 173, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 54, rx: [ { rx: 22 } ], tgc: ch }
+      - { el: 174, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 23, rx: [ { rx: 7 } ], tgc: ch }
+      - { el: 175, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 55, rx: [ { rx: 23 } ], tgc: ch }
+      - { el: 176, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 24, rx: [ { rx: 8 } ], tgc: ch }
+      - { el: 177, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 56, rx: [ { rx: 24 } ], tgc: ch }
+      - { el: 178, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 25, rx: [ { rx: 9 } ], tgc: ch }
+      - { el: 179, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 57, rx: [ { rx: 25 } ], tgc: ch }
+      - { el: 180, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 26, rx: [ { rx: 10 } ], tgc: ch }
+      - { el: 181, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 58, rx: [ { rx: 26 } ], tgc: ch }
+      - { el: 182, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 27, rx: [ { rx: 11 } ], tgc: ch }
+      - { el: 183, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 59, rx: [ { rx: 27 } ], tgc: ch }
+      - { el: 184, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 28, rx: [ { rx: 12 } ], tgc: ch }
+      - { el: 185, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 60, rx: [ { rx: 28 } ], tgc: ch }
+      - { el: 186, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 29, rx: [ { rx: 13 } ], tgc: ch }
+      - { el: 187, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 61, rx: [ { rx: 29} ], tgc: ch }
+      - { el: 188, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 30, rx: [ { rx: 14 } ], tgc: ch }
+      - { el: 189, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 62, rx: [ { rx: 30} ], tgc: ch }
+      - { el: 190, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 31, rx: [ { rx: 15 } ], tgc: ch }
+      - { el: 191, txAngle: "{steer}", rxAngle: "{steer}", lpf: "{lpfid}", tx: 63, rx: [ { rx: 31 } ], tgc: ch }
+  decim: "{rfDecimation}"
+  vsound: "{speedOfSound}"
+  output: "{viewSingleElement} ? IQ : Channel"

@@ -1,0 +1,84 @@
+version: 1
+
+setup:
+ vsound: "{speedOfSound}"
+
+network:
+
+power:
+ vpp: 30V
+ vnn: 30V
+
+afe:
+ b:
+  vcapower: low
+  lpf: high
+  lnagain: high
+  lnaclamp: auto
+  lnahpf: ultra
+  pgagain: high
+  pgaclamp: 0
+  activeterm: med
+  digihpf: low
+
+inertial:
+ enabled: false
+
+tgc:
+ ch:
+  - { v: "{rampGain} ? 0dB : 20dB", d: 0mm }
+  - { v: "{rampGain} ? 40dB : 20dB", d: "{endDepth}" }
+
+dtgc:
+ ch:
+  - { v: 0dB, d: 0mm }
+
+apod:
+ ch:
+  shape: "{focusType} == none ? ones : hamming"
+  size: 1mm
+
+lineformation:
+ ch:
+  accum: 1
+  send: 1
+  firstLine: 0
+  lastLine: 0
+  maxFrameRate: 10Hz
+  powerdown: off
+
+envlog:
+ ch:
+  dynrange: 40dB
+  noisefloor: 0dB
+  decim: "{rfDecimation} + 2"
+  filter: 2
+
+compress:
+ ch:
+  quality: 99%
+
+stream:
+ ch:
+
+rawdata:
+ ch:
+  dataType: channel
+  size: 128MB
+  freq: "{txFreq}"
+  depth: "{endDepth}"
+  focus: "{txFocus}"
+
+imageprocessing:
+ ch:
+  - { type: lineformation , id: ch }
+  - { type: rawdata, id: ch, enabled: "{storeRaw}" }
+  - { type: envlog, id: ch, enabled: "{viewSingleElement} && {singleElement}" }
+  - { type: compress, id: ch, enabled: "{viewSingleElement} && {singleElement}" }
+  - { type: stream, id: ch }
+
+imaging:
+  - { seq: channelWalk32, imgpro: ch, enabled: "{probe::capabilities::rx} == 32 && !{singleElement} && {alt} == false" }
+  - { seq: channelWalk32Alt, imgpro: ch, enabled: "{probe::capabilities::rx} == 32 && !{singleElement} && {alt} == true" }
+  - { seq: channelWalk96, imgpro: ch, enabled: "{probe::capabilities::rx} == 96 && !{singleElement}" }
+  - { seq: singleElement32, imgpro: ch, enabled: "{singleElement} && {probe::capabilities::rx} == 32" }

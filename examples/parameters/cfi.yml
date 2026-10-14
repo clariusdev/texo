@@ -1,0 +1,18 @@
+params:
+  cfiType: power
+  cfiStartDepth: "max({startDepth} + (({endDepth} - {startDepth}) / 2), 10mm) - 10mm"
+  cfiEndDepth: "{cfiStartDepth} + 20mm"
+  cfiStartElement: "{probe::geometry::elements} * 0.25"
+  cfiEndElement: "{probe::geometry::elements} * 0.75"
+  cfiSteer: 0 degrees
+  cfiTxFreq: "{probe::defaults::dopplerFreq}"
+  cfiPulse: +-+-+-+-
+  cfiTgc: 20dB
+  cfiEnsemble: 8
+  cfiPrf: 1kHz
+  cfiWf: "{cfiPrf} * 0.05"
+  cfiDr: 40dB
+  cfiNf: 10dB
+  cfiVelMap: "vel/1.png"
+  cfiPowerMap: "power/1.png"
+  color map id: "{cfiType} == power ? {cfiPowerMap} : {cfiVelMap}"

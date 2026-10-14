@@ -1,0 +1,60 @@
+# transmit nodes
+tx:
+ b:
+  shape: "{txPulse}"
+  freq: "{txFreq}"
+  fnumber: 1
+  maxApt: "{probe::capabilities::tx}"
+ binv:
+  shape: "{txPulseInv}"
+  freq: "{txFreq}"
+  fnumber: 1
+  maxApt: "{probe::capabilities::tx}"
+
+# receive nodes
+rx:
+ b:
+  shallow: "{probe::freq::upperFreq}"
+  deep: "{probe::freq::lowFreq}"
+  depth: "{probe::freq::end depth}"
+  fnumber: 1
+  type: dynamic
+  apod: b
+
+frames:
+ b:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  start element: 0
+  end element: "{probe::geometry::elements} - 1"
+  start angle: 0 degrees
+  end angle: 0 degrees
+  lines: "{probe::geometry::elements}"
+  tgc: b
+  afe: b
+  focus:
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: b, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 32 && {mla} == 1" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: binv, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 32 && {mla} == 1 && {pihEnabled}" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: b, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 32 && {mla} == 4" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: binv, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 32 && {mla} == 4 && {pihEnabled}" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: "-16", tx: b, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 64 && {mla} == 1" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: "-16", tx: binv, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 64 && {mla} == 1 && {pihEnabled}" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: +16, tx: b, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 64 && {mla} == 1" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: +16, tx: binv, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 64 && {mla} == 1 && {pihEnabled}" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: "-16", tx: b, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 64 && {mla} == 4" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: "-16", tx: binv, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 64 && {mla} == 4 && {pihEnabled}" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: +16, tx: b, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 64 && {mla} == 4" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: +16, tx: binv, dtgcs: [ d25, d75, d75, d25 ], channels: "all", enabled: "{rxc} == 64 && {mla} == 4 && {pihEnabled}" }
+  overlap: "{overlap}"
+  decim: "{iqDecimation}"
+  lpf: "{lpfid}"
+  output: IQ
+  vsound: "{speedOfSound}"
+  sync: none
+  blankLines: "{mMode} || {pwMode}"
+  acoustic mode: b
+
+blocks:
+  - id: b
+    angle: "{steer}"
+    frame: b

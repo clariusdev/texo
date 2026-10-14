@@ -1,0 +1,95 @@
+version: 1
+
+setup:
+ vsound: "{speedOfSound}"
+
+network:
+
+inertial:
+ enabled: false
+
+power:
+ vpp: 30 V
+ vnn: 30 V
+
+afe:
+ b:
+  vcapower: low
+  lpf: high
+  lnagain: med
+  pgagain: low
+  lnaclamp: auto
+  lnahpf: ultra
+  pgaclamp: 0
+  activeterm: med
+  digihpf: low
+
+tgc:
+ b:
+  - { v: 5dB, d: 0mm }
+  - { v: 40dB, d: "{probe::freq::end depth}" }
+
+dtgc:
+ b:
+  - { v: 0dB, d: 0mm }
+ d75:
+  - { v: 0dB, d: 0mm }
+ d25:
+  - { v: -6dB, d: 0mm }
+
+apod:
+ b:
+  shape: hamming
+  size: 1mm
+
+lineformation:
+ b:
+  accum: 1
+  send: "{mla} == 1 ? 1 : 2"
+  firstLine: 0
+  lastLine: "{mla} == 1 ? 0 : 3"
+
+envlog:
+ b:
+  dynrange: "{dr}"
+  noisefloor: "{nf}"
+  decim: "{envDecimation}"
+  filter: 0
+
+compress:
+ b:
+  quality: 90%
+
+stream:
+ b:
+
+rawdata:
+ iq:
+  dataType: iq
+  size: 128MB
+  freq: "{probe::stackinfo::centerFreq}"
+  depth: "{endDepth}"
+  focus: "{txFocus}"
+  mla: "{mla}"
+ env:
+  dataType: env
+  size: 64MB
+  freq: "{probe::stackinfo::centerFreq}"
+  depth: "{endDepth}"
+  focus: "{txFocus}"
+  mla: "{mla}"
+
+# image processing sequence
+imageprocessing:
+ b:
+  - { type: lineformation , id: b }
+  - { type: rawdata, id: iq, enabled: "{storeRaw}" }
+  - { type: envlog, id: b }
+  - { type: rawdata, id: env, enabled: "{storeRaw}" }
+  - { type: compress, id: b }
+  - { type: stream, id: b }
+
+# putting it all together
+imaging:
+ - { seq: sla, imgpro: b, enabled: "{mla} == 1" }
+ - { seq: mla, imgpro: b, enabled: "{mla} == 4" }

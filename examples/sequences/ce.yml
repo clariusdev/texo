@@ -1,0 +1,28 @@
+frames:
+ ce:
+  start: "{startDepth}"
+  end: "{endDepth}"
+  start element: 0
+  end element: "{probe::geometry::elements} - 1"
+  start angle: 0 degrees
+  end angle: 0 degrees
+  lines: "{probe::geometry::elements}"
+  tgc: b
+  afe: b
+  focus:
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: b, dtgcs: [ b ], channels: "odd", enabled: "{rxc} == 32 && {mla} == 1" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: b, dtgcs: [ b ], channels: "all", enabled: "{rxc} == 32 && {mla} == 1" }
+   - { focus: "{txFocus}", rx: b, rxAptOffset: 0, tx: b, dtgcs: [ b ], channels: "even", enabled: "{rxc} == 32 && {mla} == 1" }
+  overlap: "{overlap}"
+  decim: "{iqDecimation}"
+  lpf: "{lpfid}"
+  output: IQ
+  vsound: "{speedOfSound}"
+  sync: none
+  acoustic mode: b
+
+blocks:
+  - id: ce
+    angle: "{steer}"
+    frame: ce
+    enabled: "{ceAmMode}"

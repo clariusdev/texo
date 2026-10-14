@@ -1,0 +1,45 @@
+tx:
+ pw:
+  shape: "{pwPulse}"
+  freq: "{pwTxFreq}"
+  fnumber: 1
+  maxApt: "{probe::capabilities::tx}"
+
+rx:
+ pw:
+  shallow: "{pwTxFreq}"
+  deep: "{pwTxFreq}"
+  depth: "{probe::freq::end depth}"
+  fnumber: 1
+  type: dynamic
+  apod: pw
+
+frames:
+ pw:
+  start: "{pwStartDepth}"
+  end: "{pwEndDepth}"
+  start element: "{pwLine}"
+  end element: "{pwLine}"
+  start angle: 0 degrees
+  end angle: 0 degrees
+  lines: 1
+  tgc: pw
+  afe: b
+  focus: [ { focus: "{pwStartDepth} + (({pwEndDepth} - {pwStartDepth}) / 2)", rx: pw, tx: pw, dtgcs: [ pw ], channels: "all" } ]
+  decim: "{iqDecimation}"
+  lpf: 0
+  output: IQ
+  vsound: "{speedOfSound}"
+  duplex:
+    linesPerDma: "8 * round({pwPrf} / {pwLrf})"
+    prf: "{pwPrf}"
+    wf: "{pwWf}"
+    mode: "{pwType}"
+    blankBTime: 5 ms
+  sync: none
+  acoustic mode: pw
+
+blocks:
+  - id: pw
+    angle: "{pwSteer}"
+    frame: pw

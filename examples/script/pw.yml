@@ -1,0 +1,56 @@
+tgc:
+ pw:
+  - { v: "{pwTgc}", d: 0cm }
+  - { v: "{pwTgc}", d: "{probe::freq::end depth}" }
+
+dtgc:
+ pw:
+  - { v: 0dB, d: 0mm }
+
+apod:
+ pw:
+  shape: hamming
+  size: 1mm
+
+lineformation:
+ pw:
+  spectralLine: true
+
+pwwf:
+ pw:
+  order: 3
+  wf: "{pwWf}"
+  prf: "{pwPrf}"
+  linesOut: 8
+  audioGain: 100
+
+pwfft:
+ pw:
+  size: "{pwFft}"
+  dynRange: "{pwDr}"
+  noiseFloor: "{pwNf}"
+
+rawdata:
+ pw:
+  dataType: pw
+  size: 16MB
+  freq: "{pwTxFreq}"
+  depth: "{endDepth}"
+  focus: "{txFocus}"
+  prf: "{pwPrf}"
+
+imagebuffer:
+ pw:
+  size: 16MB
+
+imageprocessing:
+ pw:
+  - { type: lineformation , id: pw }
+  - { type: pwwf , id: pw }
+  - { type: pwfft , id: pw }
+  - { type: rawdata, id: pw, enabled: "{storeRaw}" }
+  - { type: compress, id: b }
+  - { type: stream, id: b }
+
+imaging:
+ - { seq: pw, imgpro: pw, enabled: "{pwMode}" }
