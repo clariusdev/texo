@@ -1,12 +1,9 @@
 # Getting Started with Texo
 
-> 🚧 **Pre-release.** Workflow and screens described here are subject to change before
-> Texo is generally available. UI walkthroughs/screenshots will be added.
-
 This guide walks through a Texo session: signing in, connecting to a probe, loading a
-research script set, applying it, imaging, and capturing data. For a tour of the window
-itself — the four script windows, image panel, probe connection, and presets — see
-[The Texo Workspace](interface.md).
+research script set, programming the probe, imaging, and capturing data. For a tour of the
+window itself, including the four script windows, image panel, probe connection and
+presets, see [The Texo Workspace](interface.md).
 
 ![Texo workspace](../blob/workspace.png)
 
@@ -16,14 +13,23 @@ Texo replaces the App's automatic optimization with explicit scripts you control
 
 ```mermaid
 flowchart TD
-  login[Sign in with Clarius Cloud] --> connect[Connect to probe over network]
+  login[Sign in with Clarius Cloud] --> connect[Connect to the probe]
   connect --> load[Load a research script set]
-  load --> edit[Edit + parse script sections]
-  edit --> apply[Apply scripts to probe]
-  apply --> image[Image live]
+  load --> edit[Edit scripts]
+  edit --> program[Program the probe]
+  program --> image[Image live]
   image --> capture[Freeze + capture data]
   capture --> edit
 ```
+
+## Before you start
+
+- Download Texo for your platform from
+  [Releases](https://github.com/clariusdev/texo/releases), and see the release notes for
+  per-platform setup.
+- Get the matching example scripts: clone this repository, or download its source archive
+  from the same release. Use the examples tagged with your Texo version, since script
+  syntax can change between releases.
 
 ## 1. Sign in
 
@@ -33,12 +39,20 @@ signed in for the session; closing the login without signing in exits.)
 
 ## 2. Connect to a probe
 
-Power the probe on and ensure it is on the same wireless network as your machine. In Texo,
-enter the probe's **IP address** and **port** and connect. As with the other research
-APIs, the probe must have research access; authentication uses your signed-in session.
+Texo works with Clarius HD3 probes that have research access enabled.
 
-Once connected, Texo shows probe status (battery, temperature) and enables the toolbar
-actions for applying scripts and imaging.
+1. Open the **Probe Connection** panel and stay on its **Bluetooth** tab.
+2. Search, select your probe, and power it on from the panel.
+3. Once the probe reports its network over Bluetooth, Texo connects to it over Wi-Fi
+   automatically and the log shows *Connected to Probe*. Your computer must be on the
+   same network as the probe.
+
+If the automatic connection doesn't happen, enter the probe's **IP address** and
+**port** in the connection bar at the bottom of the window and press **Connect**.
+
+Once connected, Texo shows probe status (battery, temperature) and enables the imaging
+buttons. If the log reports that the probe software differs from the bundled build, update
+it from the **Firmware Update** panel before imaging.
 
 ## 3. Load a research script set
 
@@ -54,10 +68,17 @@ examples/
   parameters/     parameters
 ```
 
-In the **Presets** panel, click **...** and choose the `examples` folder, then turn on the
-**HD3** filter (the probe filters start off). Pick your **Probe** and **Preset**, plus a
-**Mode** and depth **Range** if the preset offers them, and load. Texo fills its **four
-editor windows**. Every script is made of the same four parts, arranged in two columns:
+In the **Presets** panel:
+
+1. Click **...** and choose the `examples` folder.
+2. Turn on the **HD3** filter. The probe filters start off, so the probe list is empty
+   until you do.
+3. Pick your **Probe**, then a **Preset** and depth **Range**. Optionally pick a **Mode**
+   (Color Doppler, PW, M, RF, …) to add on top of B mode.
+4. Press **Load**.
+
+Texo fills its **four editor windows**. Every script is made of the same four parts,
+arranged in two columns:
 
 | Window | Part | What it defines |
 |--------|------|-----------------|
@@ -66,32 +87,74 @@ editor windows**. Every script is made of the same four parts, arranged in two c
 | **Sequences** | Sequence | The transmit/receive sequence and frame structure, built from parameters. |
 | **Processing** | Image processing | The pipeline applied to acquired data. |
 
+The B-mode scripts for the chosen range open in the first tab of each window. A chosen
+mode adds its own scripts as further tabs (e.g. `env_hl` and `cfi`), and all tabs in a
+window are sent together.
+
 See the [Scripting Guide](scripting.md) for what goes in each window and how they
 reference one another.
 
-## 4. Edit and parse
+## 4. Edit
 
-Edit any section in its tab, then parse. Texo parses each section independently and
-reports errors with the offending line highlighted, so you can fix issues before sending
-anything to the probe. All four sections must parse cleanly before you apply.
+Edit any window directly. Imaging depth, for example, is the `endDepth` parameter in the
+Parameters window. Each window has an indicator next to its title that turns green once
+it has parsed, and resets when you edit it.
 
-You can save your edited scripts back as a named set and reload them later.
+To keep your changes, use the load/save buttons under each window to write a tab to a
+file of your own. The Presets panel's **Save** writes every tab back over the files it was
+loaded from, so copy `examples/` first if you want to keep the originals.
 
-## 5. Apply and image
+## 5. Program the probe and image
 
-Apply the parsed scripts to the connected probe. Texo sends the parameters, sequences,
-processing, and probe definition, then begins imaging with exactly the settings your
-scripts specify — no depth-based auto-optimization happens behind your back.
+Press **Program Probe**. Texo parses all four windows and, if they're valid, sends the
+parameters, sequences, processing, and probe definition to the probe. The log shows
+*Parsing scripts...*, *Sent Scripts*, then *Loaded Scripts*. If a window has an error, the
+log reports it and the offending line is selected in that window.
 
-Use the freeze control to start/stop imaging.
+Press **Run** to start imaging and again to freeze. Texo images with exactly the settings
+your scripts specify; no depth-based auto-optimization happens behind your back. After
+any edit, press **Program Probe** again to apply it.
 
 ## 6. Capture data
 
-Choose a storage folder, then capture while imaging or frozen. Captures are written to
-your storage folder for offline analysis. The raw data uses the same on-disk formats
-documented in the
+Open the **Data Storage** panel (save icon in the toolbar):
+
+1. Choose the **Storage Folder**, and optionally a **Capture Prefix** and **Capture Notes**.
+2. Choose how folders and files are named: timestamp, index, or UUID.
+3. Under **Capture Selection**, choose what to save:
+   - **Images**: scan-converted images at the width × height you set, optionally with
+     Doppler overlays saved as separate frames.
+   - **Prescan**: images before scan conversion.
+   - **Download Raw**: raw data from the probe's buffer.
+4. Press **Capture Image** for the current frame or **Capture Cine** for the buffered
+   loop.
+
+Image and prescan captures also save the four scripts in use (`script.yml`,
+`sequences.yml`, `probe.yml`, `parameters.yml`) alongside the images, so every capture
+records the settings that produced it.
+
+### Raw data
+
+The probe only buffers raw data when the scripts tell it to. The example parameter files
+set `storeRaw: false`; change it to `storeRaw: true` in the Parameters window and press
+**Program Probe** before imaging. Otherwise **Download Raw** reports *No Raw Data
+Buffered*.
+
+![RF mode added to the Research preset: the RF Signal panel shows a single RF line, and Data Storage is set to Download Raw](../blob/rf.png)
+
+Raw data uses the on-disk formats documented in the
 [research repository](https://github.com/clariusdev/research/blob/master/docs/raw-data-format.md),
 so the existing Python/MATLAB readers apply.
+
+## Troubleshooting
+
+| Symptom | Fix |
+|---------|-----|
+| The **Probes** list is empty | Turn on the **HD3** filter in the Presets panel. |
+| *Application '…' Cannot be Loaded* | The data folder holds scripts from a different Texo version, or an incomplete script set. Use the examples tagged with your Texo release. |
+| *Probe software … differs from bundled …* | Update the probe from the **Firmware Update** panel. |
+| *Script Error: …* after **Program Probe** | Fix the line selected in the reported window and program again. |
+| *No Raw Data Buffered* | Set `storeRaw: true`, program the probe, and image before downloading. |
 
 ## Safety
 
@@ -104,6 +167,6 @@ safety notes.
 
 ## Where to go next
 
-- [Scripting Guide](scripting.md) — the script sections and expression language
-- [How imaging parameters are automated](https://github.com/clariusdev/research/blob/master/docs/imaging-parameter-automation.md)
-  — the model Texo scripts build on
+- [Scripting Guide](scripting.md): the script sections and expression language
+- [How imaging parameters are automated](https://github.com/clariusdev/research/blob/master/docs/imaging-parameter-automation.md):
+  the model Texo scripts build on

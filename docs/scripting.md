@@ -1,8 +1,5 @@
 # Texo Scripting Guide
 
-> 🚧 **Pre-release.** Script schemas shown here are illustrative and may change before
-> Texo is generally available.
-
 **Every Texo script is made of the same four parts.** They appear as four editor windows
 in the Texo workspace, laid out in two columns:
 
@@ -23,8 +20,8 @@ in the Texo workspace, laid out in two columns:
 | Sequences | **Sequence** | The transmit/receive events and frame layout, built from parameters. |
 | Processing | **Image processing** | How acquired data is turned into images and data streams. |
 
-Each window is edited and **parsed independently**, and all four must parse cleanly before
-the script is applied to the probe. Conceptually they layer from the hardware up to the
+Each window is **parsed independently**, and all four must parse cleanly before the script
+is applied to the probe. Conceptually they layer from the hardware up to the
 final image:
 
 ```mermaid
@@ -243,6 +240,8 @@ seq:
       # … one event per receive channel
 ```
 
+![The Channel Scope panel showing per-channel signals from the Channels Sequence on an L15](../blob/channels.png)
+
 Because receive focusing can be disabled (`type` resolving to `none`) and each channel is
 captured on its own, this yields the **rawest** acquisition — individual element/channel
 signals that you can beamform yourself offline. It is the most verbose sequence (one event
@@ -324,9 +323,14 @@ beyond them is both unsafe and unsupported.
 
 ## Workflow notes
 
-- Each section parses independently; fix reported errors (highlighted by line) before
-  applying.
-- All sections must parse cleanly before scripts are sent to the probe.
-- Save edited sets under your own name and reload them later.
+- **Program Probe** parses all four windows; an error is reported in the log and its line
+  is selected in the window it came from.
+- A window can hold several tabs (e.g. B mode plus an added mode); all of a window's tabs
+  are sent together.
+- Save edited scripts to files of your own with each window's save button, and keep a copy
+  of `examples/` before using the Presets panel's **Save**, which overwrites the loaded
+  files.
+- To capture raw data, set `storeRaw: true` in the parameters; the examples default to
+  `false`.
 - Captured data uses the standard Clarius raw formats — see
   [raw-data-format.md](https://github.com/clariusdev/research/blob/master/docs/raw-data-format.md).
