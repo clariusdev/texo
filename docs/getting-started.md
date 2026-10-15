@@ -131,7 +131,8 @@ Open the **Data Storage** panel (save icon in the toolbar):
 
 Image and prescan captures also save the four scripts in use (`script.yml`,
 `sequences.yml`, `probe.yml`, `parameters.yml`) alongside the images, so every capture
-records the settings that produced it.
+records the settings that produced it. See [Capture Output and Reading the
+Data](capture-data.md) for the folder layout.
 
 ### Raw data
 
@@ -144,7 +145,8 @@ Buffered*.
 
 Raw data uses the on-disk formats documented in the
 [research repository](https://github.com/clariusdev/research/blob/master/docs/raw-data-format.md),
-so the existing Python/MATLAB readers apply.
+so the existing readers apply. See [Capture Output and Reading the Data](capture-data.md)
+for the package contents and Python examples.
 
 ## Troubleshooting
 
@@ -154,7 +156,8 @@ so the existing Python/MATLAB readers apply.
 | *Application '…' Cannot be Loaded* | The data folder holds scripts from a different Texo version, or an incomplete script set. Use the examples tagged with your Texo release. |
 | *Probe software … differs from bundled …* | Update the probe from the **Firmware Update** panel. |
 | *Script Error: …* after **Program Probe** | Fix the line selected in the reported window and program again. |
-| *No Raw Data Buffered* | Set `storeRaw: true`, program the probe, and image before downloading. |
+| *No Raw Data Buffered* | Set `storeRaw: true`, program the probe, and image before downloading. Downloading empties the buffer, so image again before the next download. |
+| The raw `.zip` won't extract | Its entries use Zstandard compression; extract with Python 3.14 or later (see [Reading raw data](capture-data.md#reading-raw-data-in-python)). |
 
 ## Safety
 
@@ -167,6 +170,7 @@ safety notes.
 
 ## Where to go next
 
+- [Capture Output and Reading the Data](capture-data.md): what lands on disk and how to load it
 - [Scripting Guide](scripting.md): the script sections and expression language
 - [How imaging parameters are automated](https://github.com/clariusdev/research/blob/master/docs/imaging-parameter-automation.md):
   the model Texo scripts build on

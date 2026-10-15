@@ -130,7 +130,7 @@ Where and how captures are saved:
 - **Capture Image** saves the current frame and **Capture Cine** the buffered loop.
 
 Image and prescan captures save the four scripts in use alongside the images. See
-[Capture data](getting-started.md#6-capture-data) for details.
+[Capture Output and Reading the Data](capture-data.md) for what's saved and how to read it.
 
 ## Firmware Update (right)
 

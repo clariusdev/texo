@@ -32,6 +32,8 @@ matching research script sets.
   the probe, image, capture, and troubleshoot
 - [The Texo Workspace](docs/interface.md) — a tour of the window: the four script windows,
   every panel, the image, probe connection, presets, and data storage
+- [Capture Output and Reading the Data](docs/capture-data.md) — what a capture writes to
+  disk, the raw package format, and Python examples
 - [Scripting Guide](docs/scripting.md) — the four script sections and the parameter
   expression language
 

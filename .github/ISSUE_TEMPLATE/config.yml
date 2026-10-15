@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/clariusdev/texo/discussions
+    about: Ask how to do something with Texo, or share scripts and results.
+  - name: Raw data formats and readers
+    url: https://github.com/clariusdev/research
+    about: Raw data formats and the Python/MATLAB readers live in clariusdev/research.

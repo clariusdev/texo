@@ -1,0 +1,98 @@
+name: Bug report
+description: Something in Texo or the example scripts doesn't work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. The details below let us reproduce what you saw.
+        For questions or ideas, use [Discussions](https://github.com/clariusdev/texo/discussions) instead.
+  - type: input
+    id: build
+    attributes:
+      label: Texo build
+      description: The version and build in the brackets of the Texo title bar.
+      placeholder: e.g. 13.1.0.123 [a1b2c3d]
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Host OS
+      options:
+        - macOS
+        - Windows
+        - Linux
+    validations:
+      required: true
+  - type: dropdown
+    id: probe
+    attributes:
+      label: Probe model
+      options:
+        - C3 HD3
+        - C7 HD3
+        - EC7 HD3
+        - L7 HD3
+        - L15 HD3
+        - L20 HD3
+        - PA2 HD3
+    validations:
+      required: true
+  - type: dropdown
+    id: preset
+    attributes:
+      label: Preset
+      options:
+        - Research
+        - Envelope Sequence
+        - Channels Sequence
+        - None (my own scripts)
+    validations:
+      required: true
+  - type: input
+    id: mode
+    attributes:
+      label: Mode and range
+      description: The mode added on top of B mode (if any) and the depth range loaded.
+      placeholder: e.g. PW, 4 cm
+  - type: dropdown
+    id: scripts
+    attributes:
+      label: Scripts
+      options:
+        - Unmodified examples from the matching release
+        - Modified examples (attached below)
+        - Written from scratch (attached below)
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Load ...
+        2. Program Probe
+        3. Run ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log output
+      description: Copy the relevant lines from the log console at the bottom of the window.
+      render: text
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Scripts and captures
+      description: |
+        Attach the four scripts in use (`script.yml`, `sequences.yml`, `probe.yml`, `parameters.yml`).
+        An image or prescan capture saves them alongside the images, so zipping the capture folder is enough.
+        Screenshots help too.
