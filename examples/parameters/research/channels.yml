@@ -12,7 +12,8 @@ params:
   lpfid: 0
   steer: 0 degrees
   element: "{probe::geometry::elements} / 2"
-  focusType: "{singleElement} ? none : dynamic"
+  # none: channels as received; dynamic: each channel pre-delayed for the centre beam
+  focusType: none
   alt: "{probe::capabilities::platform} != v1"
   singleElement: false
   viewSingleElement: false

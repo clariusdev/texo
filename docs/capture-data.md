@@ -258,8 +258,12 @@ channels = np.empty_like(ch)
 channels[:, order] = ch          # channels[frame, channel, sample]
 ```
 
-The receive aperture is centred on the event's element (`element` in the parameters,
-the middle of the array by default). In the example, the transmit is focused at half the
+The channels are stored as received: the example sets `focusType: none`, so no receive
+delays or apodization are applied, and you can beamform them yourself. With
+`focusType: dynamic`, each channel is instead pre-delayed to focus on the centre beam.
+
+Channel *k* is element `element − 16 + k`, where `element` (in the parameters) is the
+middle of the array by default. In the example, the transmit is focused at half the
 imaging depth. Element count and pitch are in the metadata's `probe:` block, and
 `sampling rate`, `delay samples`, and `vsound` give the time axis.
 

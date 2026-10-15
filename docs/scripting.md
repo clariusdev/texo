@@ -242,9 +242,10 @@ seq:
 
 ![The Channel Scope panel showing per-channel signals from the Channels Sequence on an L15](../blob/channels.png)
 
-Because receive focusing can be disabled (`type` resolving to `none`) and each channel is
-captured on its own, this yields the **rawest** acquisition — individual element/channel
-signals that you can beamform yourself offline. It is the most verbose sequence (one event
+The example sets `focusType: none`, so receive focusing is off and each channel is
+captured as received, with flat apodization. This yields the **rawest** acquisition:
+individual element/channel signals that you can beamform yourself offline. Setting
+`focusType: dynamic` instead pre-delays each channel to focus on the centre beam. It is the most verbose sequence (one event
 per channel, for every element of interest), which is why it is authored explicitly rather
 than from a pattern.
 
