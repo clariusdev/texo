@@ -16,85 +16,10 @@ and `storeRaw: true`. Linear probes only.
 """
 
 import argparse
-import re
-import zipfile
-from dataclasses import dataclass
 
 import numpy as np
 
-
-@dataclass
-class Geometry:
-    elements: int
-    pitch: float  # m
-    lens: float  # m, lens thickness (adds to every path at the speed of sound)
-    rx_channels: int = 32
-    tx_channels: int = 64
-
-    def x(self, element):
-        """Lateral position of an element, the array centre at 0."""
-        return (np.asarray(element, float) - (self.elements - 1) / 2) * self.pitch
-
-
-@dataclass
-class Acquisition:
-    fs: float  # Hz
-    delay: float  # samples before the first stored sample
-    c: float  # m/s
-    f0: float  # Hz, transmit frequency
-    focus: float  # m, transmit focal depth
-    platform: str
-
-
-def read_raw(buf):
-    """Return (header, timestamps, data[frames, lines, samples]) from a .raw file's bytes."""
-    names = ("id", "frames", "lines", "samples", "sampleSize")
-    hdr = dict(zip(names, np.frombuffer(buf, "<u4", 5).tolist()))
-    frame_bytes = hdr["lines"] * hdr["samples"] * hdr["sampleSize"]
-    rec = np.dtype([("ts", "<u8"), ("data", "u1", frame_bytes)])
-    frames = np.frombuffer(buf, rec, hdr["frames"], offset=20)
-    data = frames["data"].copy().view("<i2")
-    return hdr, frames["ts"], data.reshape(hdr["frames"], hdr["lines"], hdr["samples"])
-
-
-def number(text, key, default=None):
-    """First number following `key:` in a metadata file."""
-    m = re.search(rf"^\s*{re.escape(key)}:\s*([-+\d.eE]+)", text, re.M)
-    if m:
-        return float(m.group(1))
-    if default is None:
-        raise KeyError(f"'{key}' not found in metadata")
-    return default
-
-
-def read_channels(path):
-    """Read the channel data and its metadata from a Download Raw package."""
-    with zipfile.ZipFile(path) as z:
-        raw = next(n for n in z.namelist() if n.endswith("_ch.raw"))
-        meta = z.read(raw.removesuffix(".raw") + ".yml").decode()
-        hdr, ts, data = read_raw(z.read(raw))
-    platform = re.search(r"^\s*version:\s*(\S+)", meta, re.M)
-    acq = Acquisition(
-        fs=number(meta, "sampling rate") * 1e6,
-        delay=number(meta, "delay samples", 0.0),
-        c=number(meta, "vsound", 1540.0),
-        f0=number(meta, "transmit frequency") * 1e6,
-        focus=number(meta, "focal depth") * 1e-3,
-        platform=platform.group(1) if platform else "v3",
-    )
-    return data, acq, meta
-
-
-def read_probe(path):
-    """Element count, pitch and lens thickness from a Texo probe definition."""
-    text = open(path).read()
-    return Geometry(
-        elements=int(number(text, "elements")),
-        pitch=number(text, "pitch") * 1e-6,
-        lens=number(text, "lensThickness", 0.0) * 1e-3,
-        rx_channels=int(number(text, "rx", 32)),
-        tx_channels=int(number(text, "tx", 64)),
-    )
+from capture import read_channels, read_probe
 
 
 def analytic(rf):
@@ -158,7 +83,7 @@ def beamform_focused(frame, geo, acq, x, z, centre=None, fnumber=1.0, tx_fnumber
     for trace, element in zip(analytic(channels.astype(float)), elements):
         dx = X - geo.x(element)
         rx = np.hypot(dx, Z)
-        t = (tx + rx + 2 * geo.lens) / acq.c
+        t = (tx + rx) / acq.c + 2 * geo.lens_time(acq.c)
         image += apodization(dx, Z, fnumber) * sample(trace, t, acq)
     return image
 
@@ -170,7 +95,7 @@ def beamform_synthetic(frame, geo, acq, x, z, fnumber=1.0):
     for element, trace in enumerate(analytic(frame.astype(float))):
         dx = X - geo.x(element)
         r = np.hypot(dx, Z)
-        t = 2 * (r + geo.lens) / acq.c
+        t = 2 * r / acq.c + 2 * geo.lens_time(acq.c)
         image += apodization(dx, Z, fnumber) * sample(trace, t, acq)
     return image
 

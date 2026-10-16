@@ -287,8 +287,10 @@ It picks the method from the capture:
   synthetic aperture at the probe's centre frequency.
 
 Both read timing (`sampling rate`, `delay samples`, `vsound`) and the transmit settings
-from the package metadata, and element count, pitch and lens thickness from the probe
-definition. Single-element lines are already in element order; only the Channels
+from the package metadata, and element count, pitch and lens thickness (and, where the
+definition gives them, element width and the lens's speed of sound) from the probe
+definition. [`python/export.py`](../python/export.py) sets up the same probe and transmit
+in Field II or PyMUST. Single-element lines are already in element order; only the Channels
 Sequence needs the reordering above.
 
 [`python/simulate.py`](../python/simulate.py) writes packages of simulated point targets
