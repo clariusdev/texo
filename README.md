@@ -36,6 +36,12 @@ matching research script sets.
   disk, the raw package format, and Python examples
 - [Scripting Guide](docs/scripting.md) — the four script sections and the parameter
   expression language
+- [Script Reference](docs/script-reference.md) — every script key with its type, units,
+  range and default
+- [Recipes](docs/recipes.md) — short how-tos that change one thing in the examples:
+  fixed frequency, steering, single element, pulse inversion, flat TGC, raw storage
+- [Python tools](python/) — a delay-and-sum beamformer for channel data and a simulator
+  to check it
 
 ## Prerequisites
 

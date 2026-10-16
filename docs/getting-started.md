@@ -172,5 +172,7 @@ safety notes.
 
 - [Capture Output and Reading the Data](capture-data.md): what lands on disk and how to load it
 - [Scripting Guide](scripting.md): the script sections and expression language
+- [Script Reference](script-reference.md): every script key
+- [Recipes](recipes.md): common script changes
 - [How imaging parameters are automated](https://github.com/clariusdev/research/blob/master/docs/imaging-parameter-automation.md):
   the model Texo scripts build on

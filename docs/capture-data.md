@@ -267,6 +267,35 @@ middle of the array by default. In the example, the transmit is focused at half 
 imaging depth. Element count and pitch are in the metadata's `probe:` block, and
 `sampling rate`, `delay samples`, and `vsound` give the time axis.
 
+### Beamforming channel data
+
+[`python/beamform.py`](../python/beamform.py) forms an image from a Download Raw package
+of channel data with delay-and-sum, for linear probes:
+
+```
+python python/beamform.py capture.zip --probe examples/probe/L15HD3/definition.yml
+```
+
+It picks the method from the capture:
+
+- **Channels Sequence**: one transmit focused at `txFocus` from the centre element,
+  received on every channel. The image covers the region the transmit beam reaches,
+  about the width of the receive aperture; outside the beam it isn't meaningful.
+- **Single element** (`singleElement: true`): every element transmits and receives on
+  its own, which gives a synthetic-aperture image across the full width of the array.
+  Expect grating lobes from strong targets, since the element pitch is coarse for
+  synthetic aperture at the probe's centre frequency.
+
+Both read timing (`sampling rate`, `delay samples`, `vsound`) and the transmit settings
+from the package metadata, and element count, pitch and lens thickness from the probe
+definition. Single-element lines are already in element order; only the Channels
+Sequence needs the reordering above.
+
+[`python/simulate.py`](../python/simulate.py) writes packages of simulated point targets
+in the same format, and `--check` beamforms them and reports how far each target lands
+from where it was placed. Use it to try the beamformer, or as a starting point for your
+own methods, before capturing on a probe.
+
 ## Other readers
 
 [clariusdev/research](https://github.com/clariusdev/research) has Python, MATLAB, and
