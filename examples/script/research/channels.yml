@@ -78,7 +78,8 @@ imageprocessing:
   - { type: stream, id: ch }
 
 imaging:
-  - { seq: channelWalk32, imgpro: ch, enabled: "{probe::capabilities::rx} == 32 && !{singleElement} && {alt} == false" }
-  - { seq: channelWalk32Alt, imgpro: ch, enabled: "{probe::capabilities::rx} == 32 && !{singleElement} && {alt} == true" }
-  - { seq: channelWalk96, imgpro: ch, enabled: "{probe::capabilities::rx} == 96 && !{singleElement}" }
+  - { seq: channelWalk32, imgpro: ch, enabled: "{probe::capabilities::rx} == 32 && !{singleElement} && {alt} == false && !{scan}" }
+  - { seq: channelWalk32Alt, imgpro: ch, enabled: "{probe::capabilities::rx} == 32 && !{singleElement} && {alt} == true && !{scan}" }
+  - { seq: channelWalk96, imgpro: ch, enabled: "{probe::capabilities::rx} == 96 && !{singleElement} && !{scan}" }
+  - { seq: channelScan32Alt, imgpro: ch, enabled: "{scan} && !{singleElement} && {probe::capabilities::rx} == 32 && {alt} == true" }
   - { seq: singleElement32, imgpro: ch, enabled: "{singleElement} && {probe::capabilities::rx} == 32" }

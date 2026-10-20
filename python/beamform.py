@@ -1,21 +1,23 @@
 """Delay-and-sum beamforming of Texo channel data.
 
 Reads a Texo Download Raw package (.zip) holding per-channel RF (`_ch.raw`) and forms
-an image from one of the two example sequences:
+an image from one of the example Channels Sequence captures:
 
-- Channels Sequence (`singleElement: false`): one focused transmit from the centre
-  element, received on every channel of the aperture. Beamforms the region around
-  the transmit beam.
+- Channel walk (the default): one focused transmit from the centre element, received on
+  every channel of the aperture. Beamforms the region around the transmit beam.
+- Scan (`scan: true`): 24 adjacent scan lines, each a focused transmit received on all 32
+  channels. Beamforms each line with dynamic receive focusing, like a B-mode image.
 - Single element (`singleElement: true`): every element transmits and receives on its
   own. Beamforms the full width of the array (synthetic aperture).
 
-Both need `focusType: none` (the example default), so channels are stored as received,
-and `storeRaw: true`. Linear probes only.
+All need `focusType: none` (the example default), so channels are stored as received,
+and `storeRaw: true`. HD3 linear probes only.
 
     python beamform.py capture.zip --probe ../examples/probe/L15HD3/definition.yml
 """
 
 import argparse
+import re
 
 import numpy as np
 
@@ -50,11 +52,43 @@ def apodization(dx, z, fnumber):
     return np.where(np.abs(dx) <= half, np.cos(np.pi * dx / (2 * half)) ** 2, 0)
 
 
-def channel_order(n, platform):
-    """Channel received by each stored line of the Channels Sequence."""
-    if platform != "v1" and n == 32:  # channelWalk32Alt: 0, 16, 1, 17, ...
-        return np.ravel(np.column_stack((np.arange(16), np.arange(16, 32))))
-    return np.arange(n)
+# receive channel of each event in the HD3 channel walk: 0, 16, 1, 17, ..., 15, 31
+WALK_CHANNELS = np.ravel(np.column_stack((np.arange(16), np.arange(16, 32))))
+
+
+def rx_channel(element):
+    """HD3 receive channel of an element; the assignment repeats every 32 elements."""
+    e = np.asarray(element)
+    return 16 * (e % 2) + (e // 2) % 16
+
+
+def line_elements(element, n=32):
+    """Element held by each stored line of a channel walk centred on `element`.
+
+    The walk's events receive channels 0, 16, 1, 17, ... of the 32 elements from
+    element - 16, so the lines hold those elements in ascending order, rotated to start at
+    the one on channel 0. Near the ends of the array the window runs past it; those
+    elements fall outside 0 .. elements - 1 and their lines hold no echo.
+    """
+    window = element - n // 2 + np.arange(n)
+    by_channel = dict(zip(rx_channel(window).tolist(), window.tolist()))
+    return np.array([by_channel[c] for c in WALK_CHANNELS[:n]])
+
+
+def scan_elements(meta, lines, n=32):
+    """Transmit element of each scan line, from the `rx element` the metadata gives every line."""
+    found = [int(v) for v in re.findall(r"rx element:\s*(-?\d+)", meta)]
+    if len(found) != lines:
+        raise ValueError(f"metadata lists {len(found)} line elements for {lines} lines")
+    return np.array(found[::n])
+
+
+def directivity(geo, dx, r, f0, c):
+    """Element response at angle asin(dx / r); 1 everywhere if the element width is unknown."""
+    if geo.width is None:
+        return np.ones_like(r)
+    sin = np.abs(dx) / np.maximum(r, 1e-12)
+    return np.abs(np.sinc(geo.width * sin * f0 / c)) * np.sqrt(1 - sin ** 2)
 
 
 def beamform_focused(frame, geo, acq, x, z, centre=None, fnumber=1.0, tx_fnumber=1.0):
@@ -66,10 +100,7 @@ def beamform_focused(frame, geo, acq, x, z, centre=None, fnumber=1.0, tx_fnumber
     wavefront is treated as plane instead.
     """
     centre = geo.elements // 2 if centre is None else centre
-    lines = frame.shape[0]
-    channels = np.empty_like(frame)
-    channels[channel_order(lines, acq.platform)] = frame
-    elements = centre - geo.rx_channels // 2 + np.arange(lines)
+    elements = line_elements(centre, frame.shape[0])
 
     X, Z = np.meshgrid(x, z)
     xs = geo.x(centre)
@@ -80,7 +111,9 @@ def beamform_focused(frame, geo, acq, x, z, centre=None, fnumber=1.0, tx_fnumber
     tx = np.where(np.abs(Z - acq.focus) < depth_of_field / 2, Z, tx)
 
     image = np.zeros(X.shape, complex)
-    for trace, element in zip(analytic(channels.astype(float)), elements):
+    for trace, element in zip(analytic(frame.astype(float)), elements):
+        if not 0 <= element < geo.elements:
+            continue
         dx = X - geo.x(element)
         rx = np.hypot(dx, Z)
         t = (tx + rx) / acq.c + 2 * geo.lens_time(acq.c)
@@ -100,13 +133,47 @@ def beamform_synthetic(frame, geo, acq, x, z, fnumber=1.0):
     return image
 
 
-def beamform(data, geo, acq, frame=0, depth=None, width=None, step=None, fnumber=1.0):
-    """Beamform one frame; picks the method from the number of stored lines."""
-    single = data.shape[1] == geo.elements
-    if not single and data.shape[1] != geo.rx_channels:
-        raise ValueError(f"{data.shape[1]} lines matches neither the element count nor the receive channels")
+def beamform_scan(frame, geo, acq, elements, z, fnumber=1.0):
+    """Scan: one image line per scan line, on its transmit axis, with dynamic receive focusing.
+
+    Each pixel at depth z under scan line `el` sums every channel at its own two-way time,
+    the transmit taken along the axis, weighted by a Hann window over the f-number aperture
+    and the element directivity. Returns image[z, line].
+    """
+    n = geo.rx_channels
+    image = np.zeros((len(z), len(elements)), complex)
+    for i, el in enumerate(elements):
+        block = analytic(frame[n * i:n * (i + 1)].astype(float))
+        for trace, element in zip(block, line_elements(el, n)):
+            if not 0 <= element < geo.elements:
+                continue
+            dx = geo.x(el) - geo.x(element)
+            rx = np.hypot(dx, z)
+            t = (z + rx) / acq.c + 2 * geo.lens_time(acq.c)
+            weight = apodization(dx, z, fnumber) * directivity(geo, dx, rx, acq.f0, acq.c)
+            image[:, i] += weight * sample(trace, t, acq)
+    return image
+
+
+def beamform(data, geo, acq, frame=0, depth=None, width=None, step=None, fnumber=1.0, meta=None):
+    """Beamform one frame; picks the method from the number of stored lines.
+
+    A scan (more lines than one walk) needs the package metadata, which gives each line's
+    element; its image has one column per scan line, at the line positions returned in x.
+    """
+    lines = data.shape[1]
+    single = lines == geo.elements
+    scan = not single and lines > geo.rx_channels and lines % geo.rx_channels == 0
+    if not (single or scan) and lines != geo.rx_channels:
+        raise ValueError(f"{lines} lines matches neither the element count nor the receive channels")
     depth = depth or (acq.delay + data.shape[2]) / acq.fs * acq.c / 2 - geo.lens
     step = step or acq.c / acq.f0 / 4
+    if scan:
+        if meta is None:
+            raise ValueError("a scan capture needs its metadata (meta=) for the line elements")
+        elements = scan_elements(meta, lines, geo.rx_channels)
+        z = np.arange(step, depth, step)
+        return geo.x(elements), z, beamform_scan(data[frame], geo, acq, elements, z, fnumber)
     if width is None:
         width = geo.elements * geo.pitch if single else geo.rx_channels * geo.pitch
     half = int(width / 2 / step)
@@ -137,10 +204,11 @@ def main():
 
     import matplotlib.pyplot as plt
 
-    data, acq, _ = read_channels(args.package)
+    data, acq, meta = read_channels(args.package)
     geo = read_probe(args.probe)
-    x, z, image = beamform(data, geo, acq, args.frame, fnumber=args.fnumber)
-    extent = [x[0] * 1e3, x[-1] * 1e3, z[-1] * 1e3, z[0] * 1e3]
+    x, z, image = beamform(data, geo, acq, args.frame, fnumber=args.fnumber, meta=meta)
+    half = (x[1] - x[0]) / 2 if len(x) > 1 else 0
+    extent = [(x[0] - half) * 1e3, (x[-1] + half) * 1e3, z[-1] * 1e3, z[0] * 1e3]
     plt.imshow(bmode(image, args.range), cmap="gray", extent=extent, aspect="equal")
     plt.xlabel("lateral (mm)")
     plt.ylabel("depth (mm)")

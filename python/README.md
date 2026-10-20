@@ -6,12 +6,13 @@ its image.
 
 | Script | What it does |
 |--------|--------------|
-| [`beamform.py`](beamform.py) | Delay-and-sum beamforming of channel data from the Channels Sequence or single-element capture |
+| [`beamform.py`](beamform.py) | Delay-and-sum beamforming of channel data from the Channels Sequence: channel walk, scan or single element |
 | [`simulate.py`](simulate.py) | Writes simulated point-target captures in the same format, and checks the beamformer against them |
 | [`export.py`](export.py) | Exports a probe and the Channels Sequence transmit to Field II or PyMUST |
 | [`capture.py`](capture.py) | Reads and writes raw data packages and probe definitions; `write_capture` saves simulated data as a Texo capture |
 
 See [Capture Output and Reading the Data](../docs/capture-data.md#beamforming-channel-data).
+[`../samples/pins.zip`](../samples/pins.zip) is a real scan of a pin phantom to try it on.
 
 ## Simulating with Field II or PyMUST
 

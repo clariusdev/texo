@@ -16,6 +16,9 @@ params:
   focusType: none
   alt: "{probe::capabilities::platform} != v1"
   singleElement: false
+  # 24 adjacent scan lines from scanStart (centred by default): focused transmit on each, its 32 channels received one per event
+  scan: false
+  scanStart: "{probe::geometry::elements} / 2 - 12"
   viewSingleElement: false
   rampGain: false
   storeRaw: false

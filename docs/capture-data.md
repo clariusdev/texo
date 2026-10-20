@@ -248,24 +248,30 @@ plt.show()
 ### Channels
 
 Each event in the Channels Sequence receives on one channel, so a frame holds one line
-per receive channel. On HD3 the example runs `channelWalk32Alt`, which visits channels in
-the order 0, 16, 1, 17, …, 15, 31. Put them back in channel order before use:
+per receive channel. On HD3 the example runs `channelWalk32Alt`, whose events receive
+channels 0, 16, 1, 17, …, 15, 31 of the 32 elements from `element − 16` to `element + 15`.
+On HD3 element *e* is on receive channel `16 × (e mod 2) + ⌊e / 2⌋ mod 16`, which repeats
+every 32 elements, so the lines hold those 32 elements in ascending order, rotated to
+start at the element on channel 0. With the default `element` of 96 (on a 192-element
+probe), lines 0–15 are elements 96–111 and lines 16–31 are elements 80–95.
 
 ```python
 hdr, ts, ch, meta = load_package("capture.zip")["ch"]
-order = np.ravel(np.column_stack((np.arange(16), np.arange(16, 32))))  # 0,16,1,17,...
-channels = np.empty_like(ch)
-channels[:, order] = ch          # channels[frame, channel, sample]
+order = np.ravel(np.column_stack((np.arange(16), np.arange(16, 32))))  # channel of each event
+window = element - 16 + np.arange(32)
+on_channel = 16 * (window % 2) + (window // 2) % 16
+elements = window[np.argsort(on_channel)][order]   # element held by ch[frame, j]
 ```
+
+`line_elements` in [`python/beamform.py`](../python/beamform.py) does the same.
 
 The channels are stored as received: the example sets `focusType: none`, so no receive
 delays or apodization are applied, and you can beamform them yourself. With
 `focusType: dynamic`, each channel is instead pre-delayed to focus on the centre beam.
 
-Channel *k* is element `element − 16 + k`, where `element` (in the parameters) is the
-middle of the array by default. In the example, the transmit is focused at half the
-imaging depth. Element count and pitch are in the metadata's `probe:` block, and
-`sampling rate`, `delay samples`, and `vsound` give the time axis.
+`element` (in the parameters) is the middle of the array by default. In the example, the
+transmit is focused at half the imaging depth. Element count and pitch are in the metadata's
+`probe:` block, and `sampling rate`, `delay samples`, and `vsound` give the time axis.
 
 ### Beamforming channel data
 
@@ -281,6 +287,11 @@ It picks the method from the capture:
 - **Channels Sequence**: one transmit focused at `txFocus` from the centre element,
   received on every channel. The image covers the region the transmit beam reaches,
   about the width of the receive aperture; outside the beam it isn't meaningful.
+- **Scan** (`scan: true`, [recipe 8](recipes.md#8-channel-data-for-every-scan-line)): 24
+  adjacent scan lines, each received on all 32 channels. Each line is beamformed on its
+  transmit axis with dynamic receive focusing, which gives a B-mode image of the strip
+  under the lines, one column per line. The line elements come from the metadata's
+  `lines` list.
 - **Single element** (`singleElement: true`): every element transmits and receives on
   its own, which gives a synthetic-aperture image across the full width of the array.
   Expect grating lobes from strong targets, since the element pitch is coarse for
@@ -290,8 +301,16 @@ Both read timing (`sampling rate`, `delay samples`, `vsound`) and the transmit s
 from the package metadata, and element count, pitch and lens thickness (and, where the
 definition gives them, element width and the lens's speed of sound) from the probe
 definition. [`python/export.py`](../python/export.py) sets up the same probe and transmit
-in Field II or PyMUST. Single-element lines are already in element order; only the Channels
-Sequence needs the reordering above.
+in Field II or PyMUST. Single-element lines are in ascending element order; Channels Sequence
+and scan lines follow the receive channels, as above.
+
+[`samples/pins.zip`](../samples/pins.zip) is a scan captured on L7HD3 over a pin phantom
+(24 lines from element 71, 4 cm depth, transmit focus 20 mm, flat 40 dB TGC). Beamform it
+to check your setup; the pins are near 10, 15, 20, 30 and 35 mm:
+
+```
+python python/beamform.py samples/pins.zip --probe examples/probe/L7HD3/definition.yml
+```
 
 [`python/simulate.py`](../python/simulate.py) writes packages of simulated point targets
 in the same format, and `--check` beamforms them and reports how far each target lands

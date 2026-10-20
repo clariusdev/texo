@@ -31,6 +31,7 @@ the [Scripting Guide](scripting.md) for how the four windows reference one anoth
 | 5 | [Flat TGC](#5-flat-tgc) | Research, Channels Sequence |
 | 6 | [Raw storage for one data type](#6-raw-storage-for-one-data-type) | Research (+ RF mode) |
 | 7 | [Channel data with or without receive focusing](#7-channel-data-with-or-without-receive-focusing) | Channels Sequence |
+| 8 | [Channel data for every scan line](#8-channel-data-for-every-scan-line) | Channels Sequence |
 
 ---
 
@@ -190,8 +191,8 @@ imaging:
 `singleElement32` (in `sequences/research/channels.yml`) has **192 events**, one per
 element: event *k* is centred on element *k*, transmits on that element alone and
 receives on that element alone. Its output is `Channel`, so each frame holds 192 lines
-of RF, **line *k* = element *k***, already in element order (unlike the channel walk,
-which [needs reordering](capture-data.md#channels)).
+of RF, **line *k* = element *k***, in ascending element order (unlike the channel walk,
+whose lines [follow the receive channels](capture-data.md#channels)).
 
 `viewSingleElement` switches the output to `IQ` and turns on `envlog` and `compress` in
 the processing chain, so you can see the data as an image while positioning the probe:
@@ -426,3 +427,58 @@ delay. Echoes from a point target on the centre line line up across channels wit
 
 - Offline beamforming, including [`python/beamform.py`](../python/beamform.py), expects
   `none`. With `dynamic` the delays are already applied.
+
+---
+
+## 8. Channel data for every scan line
+
+**Goal:** per-channel RF for a block of adjacent scan lines, each a focused transmit
+received on all 32 channels, so you can beamform a B-mode image offline.
+
+**Start from:** Channels Sequence preset, **Parameters** window
+(`parameters/research/channels.yml`).
+
+**Edit:**
+
+```diff
+-  scan: false
++  scan: true
+-  storeRaw: false
++  storeRaw: true
+```
+
+`scan: true` switches the `imaging` binding in `script/research/channels.yml` to the
+`channelScan32Alt` sequence:
+
+```yaml
+imaging:
+  - { seq: channelScan32Alt, imgpro: ch, enabled: "{scan} && !{singleElement} && {probe::capabilities::rx} == 32 && {alt} == true" }
+```
+
+`channelScan32Alt` (in `sequences/research/channels.yml`) has **768 events**: 24 scan
+lines, from element `scanStart` to `scanStart + 23`, each a focused transmit at
+`txFocus` followed by the 32 channel-walk events. Each frame holds 768 lines of RF; lines
+`32 × i` to `32 × i + 31` belong to scan line *i*, in the [channel order](capture-data.md#channels)
+of a walk centred on its element. The metadata's `lines` list gives each line's element.
+
+`scanStart` centres the 24 lines on the array by default. Move it to put the lines over
+your target, or to `0` or `elements − 24` to look at the ends of the array:
+
+```diff
+-  scanStart: "{probe::geometry::elements} / 2 - 12"
++  scanStart: 60
+```
+
+**What you should see:** about 10 Hz at 4 cm, the same frame-rate limit as the walk. Beamform a
+download with [`python/beamform.py`](../python/beamform.py), which recognises the scan
+and forms one image column per scan line.
+
+**Pitfalls:**
+
+- The strip is only 24 lines wide (4.8 mm on L7HD3). Find your target on a B-mode
+  image first and set `scanStart` so it sits under the lines.
+- Keep the sequence at 768 events. Longer scans exceed what the probe can sequence.
+- With `singleElement: true` the single-element sequence runs instead.
+- The scan transmits 768 times per frame, so it pulses about as often as a B-mode image.
+  See [Safety](getting-started.md#safety).
+

@@ -120,12 +120,14 @@ def read_probe(path):
     )
 
 
-def write_capture(path, data, geo, acq, kind="ch", depth=None, timestamps=None, time="2026-01-01T00-00-00+0000"):
+def write_capture(path, data, geo, acq, kind="ch", depth=None, timestamps=None, time="2026-01-01T00-00-00+0000",
+                  line_elements=None):
     """Write data[frames, lines, samples] (or one [lines, samples] frame) as a Download Raw package.
 
     Use it to save simulated or processed data in the same format Texo captures, so the
     same readers apply. `acq.delay` is the number of samples between the transmit and the
-    first sample in `data`. Values are stored as int16, so scale them first.
+    first sample in `data`. Values are stored as int16, so scale them first. `line_elements`
+    gives each line's transmit element, as a scan's metadata lists them.
     """
     data = np.asarray(data)
     if data.ndim == 2:
@@ -153,6 +155,8 @@ def write_capture(path, data, geo, acq, kind="ch", depth=None, timestamps=None, 
         f"size: {{samples per line: {frames.shape[2]}, number of lines: {frames.shape[1]}, sample size: 2 bytes}}\n"
         f"sampling rate: {acq.fs / 1e6:g} MHz\ndelay samples: {acq.delay:g}\nvsound: {acq.c:g} m/s\n"
     )
+    if line_elements is not None:
+        meta += "lines:\n" + "".join(f"  - {{rx element: {e},tx element: {e},angle: 0 °}}\n" for e in line_elements)
     with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr(f"{time}_{kind}.raw", raw)
         z.writestr(f"{time}_{kind}.yml", meta)
