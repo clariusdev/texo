@@ -1,3 +1,0 @@
-params:
-  mLine: "{probe::geometry::elements} / 2"
-  mSweep: 100Hz
